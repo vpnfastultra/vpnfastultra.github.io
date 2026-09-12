@@ -1,0 +1,167 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VPN Fast Ultra — Gizlilik Politikası</title>
+<style>
+  :root { --mavi: #157AFE; --koyu: #0F172A; --gri: #64748B; --cizgi: #E2E8F0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 80px;
+    font: 16px/1.7 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--koyu); background: #fff;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  header { padding: 48px 0 32px; border-bottom: 1px solid var(--cizgi); margin-bottom: 32px; }
+  h1 { font-size: 30px; margin: 0 0 8px; }
+  h2 { font-size: 21px; margin: 40px 0 12px; }
+  h3 { font-size: 17px; margin: 28px 0 8px; }
+  .tarih { color: var(--gri); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--cizgi); vertical-align: top; }
+  th { background: #F2F5F9; font-weight: 600; }
+  .kutu { background: #EEF5FF; border-left: 4px solid var(--mavi); padding: 16px 18px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--mavi); }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--cizgi); color: var(--gri); font-size: 14px; }
+  code { background: #F2F5F9; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  @media (max-width: 520px) { h1 { font-size: 25px; } body { padding: 0 16px 60px; } }
+</style>
+
+<main>
+<header>
+  <h1>VPN Fast Ultra — Gizlilik Politikası</h1>
+  <p class="tarih">Son güncelleme: 13 Eylül 2026</p>
+</header>
+
+<p>
+  Bu politika, <strong>VPN Fast Ultra</strong> (Google Play paket adı
+  <code>com.vpnfastultra.app</code>) uygulamasının hangi verileri işlediğini
+  anlatır. Kısa tutulmaya ve gerçekte olan biteni yazmaya çalışıldı.
+</p>
+
+<div class="kutu">
+  <strong>Özet:</strong> Uygulama üyelik istemez; ad, e-posta, telefon numarası
+  toplamaz. Hangi siteleri ziyaret ettiğiniz, DNS sorgularınız ve tünelden geçen
+  trafiğinizin içeriği <strong>kaydedilmez</strong>. Saklanan şey, cihazınıza
+  tünel kurabilmek için gereken teknik asgaridir. Verileriniz
+  <strong>asla satılmaz</strong> ve ücretsiz katmandaki reklam ağı dışında
+  <strong>hiçbir üçüncü tarafla paylaşılmaz</strong>; abonelikte reklam
+  olmadığı için hiçbir şey paylaşılmaz.
+</div>
+
+<h2>1. Veri sorumlusu</h2>
+<p>
+  Uygulamayı geliştiren ve sunucuları işleten: Google Play'de
+  <strong>Slooin</strong> geliştirici adıyla listelenen VPN Fast Ultra
+  geliştiricisi. İletişim:
+  <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
+</p>
+
+<h2>2. Toplanan veriler</h2>
+
+<h3>2.1 Hesap yerine anonim kimlik</h3>
+<p>
+  Uygulamayı ilk açtığınızda arka planda <strong>anonim bir kimlik</strong>
+  oluşturulur. Bu, rastgele üretilmiş bir numaradan (UUID) ibarettir. Sizden
+  hiçbir bilgi istenmez ve bu numara kimliğinizle ilişkilendirilemez. Kayıt
+  ekranı olmadığı için ad, soyad, e-posta ve telefon numarası hiçbir zaman
+  toplanmaz.
+</p>
+
+<h3>2.2 Bağlantı için saklanan teknik veriler</h3>
+<table>
+  <tr><th>Veri</th><th>Neden gerekli</th></tr>
+  <tr><td>Anonim kimlik numarası</td><td>Aboneliğin ve cihaz kaydının kime ait olduğunu bilmek</td></tr>
+  <tr><td>Cihazın WireGuard <em>açık</em> anahtarı</td><td>Sunucunun cihazı tanıyıp şifreli tünel kurabilmesi</td></tr>
+  <tr><td>Tünel içi IP adresi (örn. 10.66.66.5)</td><td>Tünelin içinde cihaza adres vermek; bu adres yalnızca tünelin içinde geçerlidir</td></tr>
+  <tr><td>Cihaz etiketi (örn. &laquo;Android&raquo;)</td><td>Birden fazla cihaz kaydında ayırt etmek</td></tr>
+  <tr><td>Kaydın oluşturulma ve güncellenme zamanı</td><td>Kullanılmayan kayıtları temizlemek</td></tr>
+  <tr><td>Bağlandığınız sunucu</td><td>Doğru sunucuya yönlendirmek ve kapasiteyi yönetmek</td></tr>
+</table>
+<p>
+  Cihazınızın <strong>özel</strong> WireGuard anahtarı cihazınızda üretilir,
+  şifreli olarak cihazınızda saklanır ve <strong>hiçbir zaman</strong> bize
+  gönderilmez.
+</p>
+
+<h3>2.3 Toplanmayanlar</h3>
+<ul>
+  <li>Ziyaret ettiğiniz siteler, uygulamalar veya DNS sorgularınız</li>
+  <li>Tünelden geçen trafiğin içeriği</li>
+  <li>Gerçek IP adresinizin kaydı (bağlantı kurmak için anlık olarak kullanılır, kaydedilmez)</li>
+  <li>Konum bilgisi</li>
+  <li>Rehber, fotoğraf, dosya veya cihazdaki diğer içerikler</li>
+</ul>
+<p>
+  VPN sunucusu, tünelin ayakta olup olmadığını görebilmek için son el sıkışma
+  zamanını ve aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar;
+  bu sayaçlar diske yazılmaz ve sunucu yeniden başladığında kaybolur.
+</p>
+
+<h3>2.4 Reklamlar</h3>
+<p>
+  Ücretsiz kullanımda Google AdMob üzerinden reklam gösterilir. Reklamların
+  seçilmesi ve ölçülmesi için Google, cihazınızın reklam kimliği gibi verileri
+  kendi politikası kapsamında işleyebilir. Bu veriler bize aktarılmaz; Google'ın
+  uygulaması için
+  <a href="https://policies.google.com/technologies/partner-sites">Google'ın gizlilik politikasına</a>
+  bakabilirsiniz. Abone olan kullanıcılara reklam gösterilmez.
+</p>
+
+<h3>2.5 Abonelik</h3>
+<p>
+  Abonelik satın alındığında ödeme Google Play üzerinden yapılır. Kart
+  bilgileriniz bize hiçbir zaman ulaşmaz; yalnızca aboneliğin geçerli olup
+  olmadığını doğrulayan mağaza kaydı saklanır.
+</p>
+
+<h2>3. Verilerin nerede tutulduğu</h2>
+<p>
+  Kayıtlar Supabase üzerinde <strong>Almanya (Frankfurt)</strong> bölgesinde,
+  VPN sunucuları ise Almanya'da barındırılır. Yani veriler Avrupa Birliği
+  sınırları içinde kalır.
+</p>
+
+<h2>4. Saklama süresi</h2>
+<ul>
+  <li>Cihaz kaydı, siz uygulamayı kullandığınız sürece saklanır.</li>
+  <li>Uygulamayı silerseniz cihazınızdaki anahtar ve oturum bilgisi de silinir; sunucudaki kayıt kullanılmadığı için pasifleşir.</li>
+  <li>Silme talebinizi ilettiğinizde kaydınız en geç 30 gün içinde tamamen silinir.</li>
+</ul>
+
+<h2>5. Üçüncü taraflar</h2>
+<table>
+  <tr><th>Kim</th><th>Ne için</th></tr>
+  <tr><td>Supabase</td><td>Veritabanı ve kimlik altyapısı (Almanya)</td></tr>
+  <tr><td>Hetzner</td><td>VPN sunucularının barındırılması (Almanya)</td></tr>
+  <tr><td>Google AdMob</td><td>Ücretsiz kullanımda reklam</td></tr>
+  <tr><td>Google Play</td><td>Abonelik ödemeleri</td></tr>
+</table>
+<p>Verileriniz bunların dışında <strong>hiç kimseyle paylaşılmaz ve asla satılmaz</strong>. Yukarıdaki dört hizmet sağlayıcı verileri yalnızca bize hizmet vermek için işler; pazarlama, profil çıkarma veya veri ticareti amacıyla kimseye aktarım yapılmaz.</p>
+
+<h2>6. Haklarınız</h2>
+<p>
+  KVKK (6698 sayılı kanun) ve GDPR kapsamında; hakkınızda tutulan verileri
+  öğrenme, düzeltilmesini veya silinmesini isteme hakkınız vardır. Talebinizi
+  yukarıdaki e-posta adresine iletebilirsiniz. Uygulamada üyelik olmadığı için
+  talebinizi eşleştirebilmemiz adına cihazınızın uygulama içinde gösterilen
+  kimlik numarasını belirtmeniz gerekir.
+</p>
+
+<h2>7. Çocuklar</h2>
+<p>
+  Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek onlardan
+  veri toplamaz.
+</p>
+
+<h2>8. Değişiklikler</h2>
+<p>
+  Bu politika değişirse bu sayfa güncellenir ve yukarıdaki tarih yenilenir.
+  Önemli bir değişiklik olursa uygulama içinde bildirilir.
+</p>
+
+<footer>
+  VPN Fast Ultra &middot; <code>com.vpnfastultra.app</code>
+</footer>
+</main>
