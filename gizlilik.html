@@ -78,6 +78,7 @@
   <tr><td>Cihaz etiketi (örn. &laquo;Android&raquo;)</td><td>Birden fazla cihaz kaydında ayırt etmek</td></tr>
   <tr><td>Kaydın oluşturulma ve güncellenme zamanı</td><td>Kullanılmayan kayıtları temizlemek</td></tr>
   <tr><td>Bağlandığınız sunucu</td><td>Doğru sunucuya yönlendirmek ve kapasiteyi yönetmek</td></tr>
+  <tr><td>Son el sıkışma zamanı (dakika hassasiyetinde)</td><td>Sunucudaki aktif cihaz sayısını sayıp uygulamada "yoğunluk" göstergesini beslemek</td></tr>
 </table>
 <p>
   Cihazınızın <strong>özel</strong> WireGuard anahtarı cihazınızda üretilir,
@@ -89,14 +90,18 @@
 <ul>
   <li>Ziyaret ettiğiniz siteler, uygulamalar veya DNS sorgularınız</li>
   <li>Tünelden geçen trafiğin içeriği</li>
-  <li>Gerçek IP adresinizin kaydı (bağlantı kurmak için anlık olarak kullanılır, kaydedilmez)</li>
+  <li>Gerçek IP adresinizin kaydı (bağlantı kurmak için anlık olarak kullanılır, kaydedilmez; bkz. 2.6)</li>
   <li>Konum bilgisi</li>
   <li>Rehber, fotoğraf, dosya veya cihazdaki diğer içerikler</li>
 </ul>
 <p>
-  VPN sunucusu, tünelin ayakta olup olmadığını görebilmek için son el sıkışma
-  zamanını ve aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar;
-  bu sayaçlar diske yazılmaz ve sunucu yeniden başladığında kaybolur.
+  VPN sunucusu, aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar;
+  bu sayaçlar diske yazılmaz ve sunucu yeniden başladığında kaybolur. Son el
+  sıkışma zamanı ise dakikada bir, dakika hassasiyetinde veritabanındaki cihaz
+  kaydına yazılır. Bunun tek kullanımı, her sunucudaki aktif cihaz sayısını
+  sayıp uygulamada "yoğunluk düşük / orta / yüksek" göstergesini beslemektir;
+  hangi siteye gittiğinizle veya ne kadar veri aktardığınızla ilişkilendirilmez
+  ve cihaz kaydı durduğu sürece saklanır.
 </p>
 
 <h3>2.4 Reklamlar</h3>
@@ -108,12 +113,37 @@
   <a href="https://policies.google.com/technologies/partner-sites">Google'ın gizlilik politikasına</a>
   bakabilirsiniz. Abone olan kullanıcılara reklam gösterilmez.
 </p>
+<p>
+  <strong>Ödüllü reklam:</strong> ücretsiz kullanımda bir reklamı sonuna kadar
+  izleyerek 30 dakikalığına tam hız kazanabilirsiniz. Reklam izlendiğinde Google
+  (AdMob), sunucumuza imzalı bir çağrı gönderir; bu çağrıda reklam birimi
+  kimliği, bir işlem numarası ve cihazınızın anonim kimliği bulunur. Biz
+  yalnızca işlem numarasını ve anonim kimliği saklarız — tek amacı aynı reklam
+  için ödülün iki kez verilmesini önlemektir. Hangi reklamı izlediğiniz, reklamın
+  içeriği veya bir izleme geçmişi tutulmaz.
+</p>
 
 <h3>2.5 Abonelik</h3>
 <p>
   Abonelik satın alındığında ödeme Google Play üzerinden yapılır. Kart
-  bilgileriniz bize hiçbir zaman ulaşmaz; yalnızca aboneliğin geçerli olup
-  olmadığını doğrulayan mağaza kaydı saklanır.
+  bilgileriniz bize hiçbir zaman ulaşmaz. Satın alma tamamlanınca Google
+  Play'in verdiği <em>satın alma jetonu</em> (purchase token) sunucumuza
+  gönderilir; sunucumuz bu jetonu Google'ın Play Developer API'sine sorarak
+  aboneliğin gerçekten var ve geçerli olduğunu doğrular. Bizde saklanan şey
+  yalnızca bu jeton, seçtiğiniz plan (yıllık / aylık / haftalık) ve aboneliğin
+  bitiş tarihidir; ödeme yöntemi, fatura adresi veya Google hesabınızın adı bize
+  gelmez.
+</p>
+
+<h3>2.6 Bağlantı kesilince gösterilen "Gerçek IP / Şehir"</h3>
+<p>
+  Bağlantı kesildikten sonra rapor ekranında cihazınızın o an dışarıdan görünen
+  IP adresi ve kaba konumu (ülke / şehir) gösterilir. Bu bilgi, cihazınızın
+  bizim VPN sunucumuza doğrudan yaptığı bir isteğin geldiği IP adresinden,
+  sunucu üzerindeki yerel bir GeoLite2 veritabanıyla bulunur ve yalnızca
+  cihazınıza geri gönderilir. Bu istek <strong>kaydedilmez ve loglanmaz</strong>;
+  IP adresiniz veya şehriniz hiçbir yere yazılmaz, üçüncü bir hizmete
+  sorulmaz.
 </p>
 
 <h2>3. Verilerin nerede tutulduğu</h2>
@@ -127,6 +157,7 @@
 <ul>
   <li>Cihaz kaydı, siz uygulamayı kullandığınız sürece saklanır.</li>
   <li>Uygulamayı silerseniz cihazınızdaki anahtar ve oturum bilgisi de silinir; sunucudaki kayıt kullanılmadığı için pasifleşir.</li>
+  <li>Ödüllü reklam işlem numaraları ve abonelik doğrulama kaydı, anonim kimliğinizle birlikte cihaz kaydınız durduğu sürece saklanır.</li>
   <li>Silme talebinizi ilettiğinizde kaydınız en geç 30 gün içinde tamamen silinir.</li>
 </ul>
 
@@ -135,8 +166,8 @@
   <tr><th>Kim</th><th>Ne için</th></tr>
   <tr><td>Supabase</td><td>Veritabanı ve kimlik altyapısı (Almanya)</td></tr>
   <tr><td>Hetzner</td><td>VPN sunucularının barındırılması (Almanya)</td></tr>
-  <tr><td>Google AdMob</td><td>Ücretsiz kullanımda reklam</td></tr>
-  <tr><td>Google Play</td><td>Abonelik ödemeleri</td></tr>
+  <tr><td>Google AdMob</td><td>Ücretsiz kullanımda reklam; ödüllü reklamda sunucumuza imzalı ödül bildirimi (bkz. 2.4)</td></tr>
+  <tr><td>Google Play</td><td>Abonelik ödemeleri ve satın alma jetonunun doğrulanması (bkz. 2.5)</td></tr>
 </table>
 <p>Verileriniz bunların dışında <strong>hiç kimseyle paylaşılmaz ve asla satılmaz</strong>. Yukarıdaki dört hizmet sağlayıcı verileri yalnızca bize hizmet vermek için işler; pazarlama, profil çıkarma veya veri ticareti amacıyla kimseye aktarım yapılmaz.</p>
 
