@@ -30,209 +30,424 @@
   table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
   th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--cizgi); vertical-align: top; }
   th { background: #F2F5F9; font-weight: 600; }
+  .tablo { overflow-x: auto; }
   .kutu { background: #EEF5FF; border-left: 4px solid var(--mavi); padding: 16px 18px; margin: 24px 0; border-radius: 0 8px 8px 0; }
-  ul { padding-left: 22px; }
+  ul, ol { padding-left: 22px; }
   li { margin: 6px 0; }
-  a { color: var(--mavi); }
+  a { color: var(--mavi); overflow-wrap: anywhere; }
   footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--cizgi); color: var(--gri); font-size: 14px; }
   code { background: #F2F5F9; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
-  @media (max-width: 520px) { h1 { font-size: 25px; } body { padding: 0 16px 60px; } }
+  @media (max-width: 520px) { h1 { font-size: 25px; } body { padding: 0 16px 60px; } table { font-size: 14px; } th, td { padding: 8px; } }
 </style>
 
 <main>
 <header>
-  <h1>VPN Fast Ultra — Gizlilik Politikası</h1>
-  <p class="tarih">Son güncelleme: 4 Ekim 2026 · <a href="privacy.html">English</a></p>
+  <h1>VPN Fast Ultra — Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
+  <p class="tarih">Yürürlük tarihi: 4 Ekim 2026 · Sürüm 2.0 · <a href="privacy.html">English</a></p>
 </header>
 
 <p>
-  Bu politika, <strong>VPN Fast Ultra</strong> (Google Play paket adı
-  <code>com.vpnfastultra.app</code>) uygulamasının hangi verileri işlediğini,
-  ne kadar sakladığını ve kimlerle paylaştığını anlatır. Gerçekte olan biteni
-  yazmaya çalıştık; bir ifade uygulamanın davranışıyla çelişirse bize yazın.
+  Bu metin, <strong>VPN Fast Ultra</strong> Android uygulamasını (Google Play paket
+  adı <code>com.vpnfastultra.app</code>) kullanırken hangi kişisel verilerinizin,
+  hangi amaçla ve hangi hukuki sebeple işlendiğini, kimlere aktarıldığını, ne kadar
+  saklandığını ve haklarınızı nasıl kullanabileceğinizi açıklar. 6698 sayılı Kişisel
+  Verilerin Korunması Kanunu (<strong>KVKK</strong>) m.10 kapsamındaki aydınlatma
+  metni ve AB Genel Veri Koruma Tüzüğü (<strong>GDPR</strong>) m.13 kapsamındaki
+  bilgilendirme bu metindir. Uygulamanın gerçek davranışını anlatmaya özen
+  gösterdik; bir ifadenin uygulamayla çeliştiğini düşünürseniz lütfen bize yazın.
 </p>
 
 <div class="kutu">
-  <strong>Özet:</strong> Uygulama üyelik istemez; ad, e-posta, telefon numarası
-  toplamaz. Ziyaret ettiğiniz siteler ve tünelden geçen trafiğinizin içeriği
-  <strong>kaydedilmez</strong>. Saklanan şey, cihazınıza tünel kurabilmek için
-  gereken teknik asgaridir ve kısa sürelerle tutulur (bkz. 4). Verileriniz
-  <strong>satılmaz</strong> ve ücretsiz katmandaki reklam ağı ile aşağıda
-  sayılan altyapı sağlayıcıları dışında üçüncü taraflarla paylaşılmaz.
-  Abonelikte reklam yoktur; abone olunca reklam altyapısı hiç çalıştırılmaz.
+  <strong>Özet:</strong> Uygulama üyelik istemez; ad, e-posta veya telefon
+  numarası sormaz. Ziyaret ettiğiniz siteleri, DNS sorgularınızı ve tünelden geçen
+  trafiğin içeriğini <strong>kaydetmeyiz</strong>; bağlantı geçmişi tutmayız.
+  Tünel kurmak için gereken teknik asgari veriyi kısa sürelerle saklarız (bkz. 7).
+  Verileriniz <strong>satılmaz</strong>; ücretsiz katmandaki reklam ağı (Google
+  AdMob) ve aşağıda sayılan hizmet sağlayıcılar dışında üçüncü taraflarla
+  paylaşılmaz. Premium abonelikte reklam yoktur; abone olduğunuzda reklam
+  altyapısı hiç başlatılmaz.
 </div>
 
 <h2>1. Veri sorumlusu</h2>
 <p>
-  Uygulamayı geliştiren ve sunucuları işleten:
-  <strong>Özdemir Bilişim ve Teknoloji Hizmetleri</strong> (Google Play geliştirici adı).<br>
+  <strong>Özdemir Bilişim ve Teknoloji Hizmetleri</strong> (Google Play geliştirici adı)<br>
   Adres: Kızılcıklı Mah. Şehit Çavuş Erman Aydın Cad. No:35/K, Nilüfer/Bursa, Türkiye<br>
-  İletişim ve tüm veri talepleri için:
-  <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
+  E-posta (tüm gizlilik ve veri talepleri): <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
 </p>
-
-<h2>2. İşlenen veriler</h2>
-
-<h3>2.1 Hesap yerine anonim kimlik</h3>
 <p>
-  Uygulamayı ilk açtığınızda arka planda <strong>anonim bir kimlik</strong>
-  oluşturulur: rastgele üretilmiş bir numara (UUID). Sizden hiçbir bilgi
-  istenmez; ad, soyad, e-posta ve telefon numarası toplanmaz. Bu numara tek
-  başına sizi tanımlamaz; ancak aşağıda sayılan teknik kayıtlarla (abonelik
-  jetonu, cihaz kaydı) aynı numara altında tutulur.
+  Uygulamayı geliştiren, sunucuları işleten ve kişisel verilerinizin işlenme
+  amaçlarını ve araçlarını belirleyen biziz. Bu metinde "biz" bu işletmeyi,
+  "uygulama" VPN Fast Ultra'yı, "hizmet" uygulama ve sunucularımız üzerinden
+  sunulan VPN hizmetini ifade eder.
 </p>
 
-<h3>2.2 Bağlantı için saklanan teknik veriler (cihaz kaydı)</h3>
-<table>
+<h2>2. Kapsam ve verilerin toplanma yöntemi</h2>
+<p>
+  Bu politika uygulamayı, VPN sunucularımızı, arka uç altyapımızı ve
+  <code>vpnfastultra.github.io</code> sitesini kapsar. Kişisel verileriniz,
+  uygulamayı kullanmanız sırasında uygulama ve sunucularımız aracılığıyla
+  <strong>otomatik yollarla, elektronik ortamda</strong> toplanır; bize e-posta
+  gönderdiğinizde ise sizin ilettiğiniz bilgiler işlenir. Uygulama yalnızca
+  internet erişimi iznini ve VPN bağlantısı için Android'in kendi onay penceresini
+  kullanır; konum, rehber, fotoğraf, dosya, mikrofon veya kamera izni istemez.
+</p>
+
+<h2>3. İşlediğimiz veriler</h2>
+
+<h3>3.1 Hesap yerine anonim kimlik</h3>
+<p>
+  İlk açılıştaki Gizlilik ve Hizmet Şartları kartını kabul etmenizden sonra
+  arka planda <strong>anonim bir kimlik</strong> oluşturulur (kabulden önce
+  uygulama hiçbir ağ isteği yapmaz): rastgele üretilmiş bir numara (UUID) ve bu kimliğe ait oturum
+  anahtarları. Kimliğin oluşturulma ve son oturum zamanı da tutulur. Sizden
+  hiçbir bilgi istenmez. Bu numara tek başına adınızı ortaya koymaz; ancak
+  aşağıdaki teknik kayıtlar aynı numara altında tutulduğu için kişisel veri
+  olarak kabul edilir ve bu politikaya tabidir. Uygulamadaki
+  <strong>Aboneliğim</strong> ekranında görünen "cihaz kimliği" bu numaradır.
+</p>
+
+<h3>3.2 Bağlantı için saklanan teknik veriler (cihaz kaydı)</h3>
+<div class="tablo"><table>
   <tr><th>Veri</th><th>Neden gerekli</th></tr>
-  <tr><td>Anonim kimlik numarası</td><td>Aboneliğin ve cihaz kaydının kime ait olduğunu bilmek</td></tr>
-  <tr><td>Cihazın WireGuard <em>açık</em> anahtarı</td><td>Sunucunun cihazı tanıyıp şifreli tünel kurabilmesi</td></tr>
-  <tr><td>Tünel içi IP adresi (örn. 10.66.66.5)</td><td>Tünelin içinde cihaza adres vermek; yalnızca tünelin içinde geçerlidir</td></tr>
-  <tr><td>Cihaz etiketi (örn. &laquo;Android&raquo;)</td><td>Kaydı tanımlamak</td></tr>
-  <tr><td>Bağlandığınız sunucu</td><td>Doğru sunucuya yönlendirmek ve kapasiteyi yönetmek</td></tr>
-  <tr><td>Kayıt ve son el sıkışma zamanı (saniye hassasiyetinde)</td><td>Sunucudaki aktif cihaz sayısını sayıp "yoğunluk" göstergesini beslemek ve kullanılmayan kayıtları silmek</td></tr>
-</table>
+  <tr><td>Anonim kimlik numarası</td><td>Cihaz kaydının, katmanın ve aboneliğin birbirine bağlanması</td></tr>
+  <tr><td>Cihazın WireGuard <em>açık</em> anahtarı</td><td>Sunucunun cihazınızı tanıyıp şifreli tüneli kurabilmesi</td></tr>
+  <tr><td>Tünel içi IP adresi (örn. 10.66.66.5)</td><td>Tünelin içinde cihazınıza adres verilmesi; yalnızca tünel içinde geçerlidir</td></tr>
+  <tr><td>Cihaz etiketi (örn. «Android»)</td><td>Kaydın tanımlanması</td></tr>
+  <tr><td>Bağlandığınız sunucu ve katmanınız (Ücretsiz / Premium)</td><td>Doğru sunucuya yönlendirme, hız sınıfının ve kapasitenin yönetimi</td></tr>
+  <tr><td>Kayıt zamanı ve <em>en son</em> el sıkışma zamanı (saniye hassasiyetinde)</td><td>Sunucudaki etkin cihaz sayısını sayıp yoğunluk göstergesini beslemek ve kullanılmayan kayıtları silmek. Yalnızca en son zaman tutulur; her yeni bağlantıda üzerine yazılır, geçmiş oluşmaz.</td></tr>
+  <tr><td>Ödüllü reklamla kazanılan tam hızın bitiş zamanı</td><td>Ödülün uygulanması (bkz. 3.6)</td></tr>
+</table></div>
 <p>
   Her anonim kimlik için tek bir cihaz kaydı tutulur. Cihazınızın
-  <strong>özel</strong> WireGuard anahtarı cihazınızda üretilir, şifreli olarak
-  cihazınızda saklanır ve <strong>hiçbir zaman</strong> bize gönderilmez.
+  <strong>özel</strong> WireGuard anahtarı cihazınızda üretilir, cihazınızda
+  şifreli olarak saklanır ve <strong>hiçbir zaman</strong> bize gönderilmez.
 </p>
 
-<h3>2.3 IP adresi</h3>
+<h3>3.3 Gerçek IP adresiniz</h3>
 <ul>
-  <li><strong>VPN sunucusu:</strong> bağlı olduğunuz sürece WireGuard, paketleri size geri gönderebilmek için cihazınızın o anki gerçek IP adresini ve portunu <em>bellekte</em> tutar. Bu bilgi diske yazılmaz, kayıt dosyasına geçmez ve sunucu yeniden başladığında kaybolur.</li>
-  <li><strong>Hesap altyapısı (Supabase):</strong> uygulama oturum açtığında Supabase kendi oturum kaydına isteğin geldiği IP adresini ve tarayıcı bilgisini yazar. Bu alanları <strong>10 dakikada bir otomatik olarak sileriz</strong>. Supabase'in altyapı (ağ geçidi) kayıtları da istek IP adreslerini kendi işletim süresince kısa bir süre tutar.</li>
-  <li>IP adresinizi konum bulmak, profil çıkarmak veya başka bir amaçla kullanmayız.</li>
+  <li><strong>VPN sunucusu:</strong> WireGuard, paketleri size geri gönderebilmek için cihazınızın son bağlandığı gerçek IP adresini ve portunu <em>yalnızca bellekte</em> tutar. Bu bilgi bağlantınız kesildikten sonra da, cihaz kaydınız sunucudan kaldırılana (bkz. 7) veya sunucu yeniden başlatılana kadar bellekte kalabilir; yeni bir bağlantıda üzerine yazılır. Diske yazılmaz, işletim kayıtlarına geçmez, yedeklenmez.</li>
+  <li><strong>Arka uç altyapısı (Supabase):</strong> uygulama oturum açtığında veya oturumu yenilediğinde Supabase, kendi oturum kaydına isteğin geldiği IP adresini ve istemci bilgisini (user-agent) yazar. Bu alanları <strong>10 dakikada bir otomatik olarak sileriz</strong>. Ayrıca Supabase'in platform kayıtları (API ağ geçidi ve fonksiyon kayıtları) istek IP adreslerini kendi saklama süresi boyunca (plana göre 1 ila 7 gün) tutar.</li>
+  <li><strong>Gecikme ölçümü:</strong> konum ekranındaki gecikme (ms) değeri için uygulama sunucuya kısa bir HTTPS isteği gönderir. Bu istekler sunucuda kaydedilmez.</li>
+  <li>IP adresinizi konumunuzu bulmak, profil çıkarmak veya bu politikada yazmayan başka bir amaçla kullanmayız.</li>
 </ul>
 
-<h3>2.4 Toplanmayanlar</h3>
+<h3>3.4 Trafik, bağlantı ve DNS</h3>
 <ul>
-  <li>Ziyaret ettiğiniz siteler, kullandığınız uygulamalar, tünelden geçen trafiğin içeriği</li>
-  <li>Bağlantı geçmişi (hangi saatte nereye bağlandığınız)</li>
-  <li>Konum bilgisi; rehber, fotoğraf, dosya veya cihazdaki diğer içerikler</li>
+  <li>Ziyaret ettiğiniz siteleri, kullandığınız uygulamaları, tünelden geçen trafiğin içeriğini ve bağlantı geçmişinizi (hangi saatte nereye bağlandığınızı) <strong>kaydetmeyiz</strong>.</li>
+  <li>VPN sunucusu, hız sınırını uygulamak ve uygulamadaki veri göstergesini beslemek için aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar; bu sayaçlar diske yazılmaz.</li>
+  <li>Sunucunun işletim kaydında yalnızca cihaz sayısı gibi toplam bilgiler bulunur; cihaz anahtarı veya IP adresi yazılmaz. Bu kayıt 7 gün sonra silinir.</li>
+  <li><strong>DNS:</strong> tünel açıkken alan adı sorgularınız tünelin içinden Cloudflare'in <code>1.1.1.1</code> çözümleyicisine gider. Sorgular bizim tarafımızda kaydedilmez. Cloudflare sorguyu sizin gerçek IP adresinizle değil, VPN sunucusunun adresiyle görür ve kendi <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 gizlilik taahhüdü</a> kapsamında işler (sorgulayan IP adresini kalıcı depolamaya yazmama ve kayıtları 25 saat içinde silme).</li>
 </ul>
-<p>
-  VPN sunucusu aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar
-  (hız sınırı ve uygulamadaki MB göstergesi için); bu sayaçlar diske yazılmaz.
-  Sunucunun işletim kaydında cihaz sayısı gibi toplam bilgiler bulunur; cihaz
-  anahtarı veya IP adresi yazılmaz ve kayıt 7 günde bir silinir.
-</p>
 
-<h3>2.5 DNS</h3>
+<h3>3.5 Reklamlar (yalnızca ücretsiz kullanım)</h3>
 <p>
-  Tünel açıkken alan adı sorgularınız (DNS) tünelin içinden Cloudflare'in
-  <code>1.1.1.1</code> çözümleyicisine gider. Sorgular bizim tarafımızda
-  kaydedilmez; Cloudflare bunları kendi
-  <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 gizlilik taahhüdü</a>
-  kapsamında işler. Cloudflare sorgunun sizin gerçek IP adresinizi değil, VPN
-  sunucusunun adresini görür.
+  Ücretsiz kullanımda Google AdMob aracılığıyla banner, geçiş, açılış ve ödüllü
+  reklamlar gösterilir. Reklam altyapısı, ilk açılıştaki Gizlilik ve Hizmet
+  Şartları onayını vermeden başlatılmaz; Premium abonelerde hiç başlatılmaz.
+  Reklam gösterilirken Google, kendi politikaları kapsamında şu tür verileri
+  toplayabilir ve işleyebilir: cihazın <strong>reklam kimliği</strong> ve uygulama
+  grubu kimliği, IP adresi ve buna dayalı <strong>yaklaşık konum</strong>, cihaz
+  ve uygulama bilgileri, reklamlarla etkileşimleriniz (gösterim, tıklama, izleme)
+  ve teşhis (performans, çökme) verileri. Google bu verileri reklam sunmak,
+  ölçmek, kötüye kullanımı ve dolandırıcılığı önlemek ve — izin verdiğiniz veya
+  ilgili hukukun izin verdiği ölçüde — reklamları kişiselleştirmek için kullanır.
+  Google'ın bu verileri nasıl kullandığını
+  <a href="https://policies.google.com/technologies/partner-sites">Google'ın iş ortaklarının sitelerini veya uygulamalarını kullandığınızda Google'ın verileri nasıl kullandığı</a>
+  sayfasında okuyabilirsiniz.
 </p>
-
-<h3>2.6 Reklamlar (yalnızca ücretsiz kullanım)</h3>
-<p>
-  Ücretsiz kullanımda Google AdMob üzerinden reklam gösterilir. Google,
-  reklamların seçilmesi ve ölçülmesi için cihazınızın reklam kimliği gibi
-  verileri kendi politikası kapsamında işler. Avrupa Ekonomik Alanı,
-  Birleşik Krallık ve İsviçre'de reklam izni Google'ın onay formuyla istenir ve
-  <strong>Ayarlar &gt; Reklam gizlilik seçenekleri</strong> üzerinden her zaman
-  değiştirilebilir. Google'ın uygulaması için
-  <a href="https://policies.google.com/technologies/partner-sites">Google'ın gizlilik politikasına</a>
-  bakabilirsiniz. Abone olan kullanıcılarda reklam altyapısı hiç başlatılmaz.
-</p>
-<p>
-  <strong>Ödüllü reklam:</strong> bir reklamı sonuna kadar izleyerek 30
-  dakikalığına tam hız kazanabilirsiniz (toplam en fazla 2 saat). Ödülü
-  doğrulayabilmek için reklam yüklenirken anonim kimlik numaranız Google'a
-  iletilir; reklam izlenince Google sunucumuza imzalı bir bildirim gönderir.
-  Biz yalnızca işlem numarasını ve anonim kimliği, aynı reklam için ödülün iki
-  kez verilmesini önlemek amacıyla <strong>30 gün</strong> saklarız; tam hızın
-  bitiş zamanı cihaz kaydınızla birlikte tutulur. Hangi reklamı izlediğiniz
-  tutulmaz.
-</p>
-
-<h3>2.7 Abonelik</h3>
-<p>
-  Ödeme Google Play üzerinden yapılır; kart bilgileriniz bize ulaşmaz. Satın
-  alma tamamlanınca Google Play'in verdiği <em>satın alma jetonu</em> sunucumuza
-  gönderilir ve Google Play Developer API'sine sorularak doğrulanır. Saklanan:
-  jeton, plan (yıllık / aylık / haftalık), abonelik durumu, başlangıç ve bitiş
-  tarihi. Abonelik durumu iade, iptal ve plan değişikliklerini yakalamak için
-  günde bir kez Google Play'e yeniden sorulur. Ödeme yöntemi, fatura adresi
-  veya Google hesabınızın adı bize gelmez.
-</p>
-<p>
-  Premium aynı anda <strong>tek bir cihazda</strong> geçerlidir. Yeni bir
-  cihazda <em>Satın almayı geri yükle</em> dediğinizde abonelik o cihaza
-  taşınır ve önceki cihaz ücretsiz kullanıma döner.
-</p>
-
-<h2>3. İşleme amaçları ve hukuki dayanak</h2>
-<table>
-  <tr><th>Amaç</th><th>Hukuki dayanak (KVKK m.5 / GDPR m.6)</th></tr>
-  <tr><td>VPN bağlantısını kurmak, katmanı ve aboneliği yönetmek</td><td>Sözleşmenin ifası</td></tr>
-  <tr><td>Kötüye kullanımı ve aşırı yükü önlemek, güvenlik</td><td>Meşru menfaat</td></tr>
-  <tr><td>Ücretsiz kullanımda reklam (AEA/BK/İsviçre'de kişiselleştirme)</td><td>Meşru menfaat; ilgili bölgelerde açık rıza (onay formu)</td></tr>
-  <tr><td>Abonelik kayıtlarını mevzuatın gerektirdiği ölçüde tutmak</td><td>Hukuki yükümlülük</td></tr>
-</table>
-
-<h2>4. Saklama süreleri</h2>
 <ul>
-  <li><strong>Cihaz kaydı:</strong> 14 gün boyunca hiç bağlanılmazsa otomatik silinir. Tekrar bağlandığınızda yeni bir kayıt oluşturulur.</li>
-  <li><strong>Oturum kaydındaki IP adresi ve tarayıcı bilgisi:</strong> en geç 10 dakika içinde silinir.</li>
-  <li><strong>Ödüllü reklam işlem numaraları:</strong> 30 gün.</li>
-  <li><strong>Anonim kimlik ve ona bağlı tüm kayıtlar:</strong> 180 gün boyunca hiç kullanılmazsa (ve geçerli bir abonelik yoksa) otomatik silinir.</li>
-  <li><strong>Abonelik kaydı:</strong> anonim kimlik durduğu sürece; kimlik silinince birlikte silinir.</li>
+  <li><strong>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre:</strong> reklam ve kişiselleştirme izni Google'ın onay formuyla istenir. Kararınızı <strong>Ayarlar &gt; Reklam gizlilik seçenekleri</strong> üzerinden her zaman değiştirebilir veya izninizi geri çekebilirsiniz.</li>
+  <li><strong>Tüm ülkeler:</strong> Android cihazınızın <strong>Ayarlar &gt; Google &gt; Reklamlar</strong> (veya <strong>Ayarlar &gt; Gizlilik &gt; Reklamlar</strong>) bölümünden reklam kimliğinizi silebilir veya sıfırlayabilirsiniz; silinen reklam kimliğiyle kişiselleştirilmiş reklam gösterilmez.</li>
+  <li>Reklam görmek istemiyorsanız Premium aboneliğe geçebilirsiniz.</li>
+</ul>
+
+<h3>3.6 Ödüllü reklam</h3>
+<p>
+  Bir ödüllü reklamı sonuna kadar izlerseniz 30 dakika tam hız kazanırsınız
+  (birikerek en fazla 2 saat). Ödülün gerçekten izlenen bir reklama karşılık
+  verildiğini doğrulamak için reklam yüklenirken anonim kimlik numaranız Google'a
+  iletilir; reklam izlendiğinde Google sunucumuza imzalı bir bildirim gönderir.
+  Aynı reklamın iki kez ödüllendirilmesini önlemek için yalnızca Google'ın işlem
+  numarasını ve anonim kimliğinizi <strong>30 gün</strong> saklarız. Tam hızın
+  bitiş zamanı cihaz kaydınızla birlikte tutulur. Hangi reklamı izlediğinizi
+  saklamayız.
+</p>
+
+<h3>3.7 Abonelik ve ödemeler</h3>
+<p>
+  Premium abonelik Google Play üzerinden satın alınır; ödeme bilgileriniz (kart,
+  fatura adresi, Google hesabınızın adı ve e-postası) bize ulaşmaz. Satın alma
+  tamamlanınca Google Play'in verdiği <em>satın alma jetonu</em> sunucumuza
+  gönderilir ve Google Play Developer API ile doğrulanır. Saklananlar: jeton,
+  plan (yıllık / aylık / haftalık), abonelik durumu, başlangıç ve bitiş tarihi.
+  İade, iptal ve plan değişikliklerini yansıtmak için abonelik durumu günde bir
+  kez Google Play'e yeniden sorulur.
+</p>
+<p>
+  Premium aynı anda <strong>tek bir cihazda</strong> geçerlidir. Başka bir cihazda
+  <em>Satın almayı geri yükle</em>'ye dokunduğunuzda abonelik kaydı o cihazın
+  anonim kimliğine taşınır ve önceki cihaz ücretsiz kullanıma döner.
+</p>
+<p>
+  Google, satışlara ilişkin olarak bize Play Console üzerinden sipariş numarası,
+  ürün, fiyat, tarih ve alıcının ülkesi (bazı ülkelerde il veya posta kodu) gibi
+  bilgileri içeren satış ve ödeme raporları sunar. Bu raporlar muhasebe ve vergi
+  yükümlülüklerimiz için kullanılır; anonim kimliğinizle eşleştirilmez.
+</p>
+
+<h3>3.8 Destek ve başvurular</h3>
+<p>
+  Bize e-posta yazdığınızda e-posta adresiniz, adınız (e-postada görünüyorsa),
+  mesajınızın içeriği ve paylaştığınız diğer bilgiler (örneğin cihaz kimliği)
+  yalnızca talebinizi yanıtlamak, kaydınızı bulmak ve gerektiğinde başvurunun
+  yapıldığını ispat etmek için işlenir. Destek e-postası Google'ın Gmail hizmeti
+  üzerinden yürütülür.
+</p>
+
+<h3>3.9 Yalnızca cihazınızda tutulanlar</h3>
+<p>
+  WireGuard özel anahtarınız, oturum anahtarlarınız, dil ve uygulama ayarlarınız
+  ile ilk açılış onayınızın kaydı yalnızca cihazınızda, gizli bilgiler Android
+  Keystore ile korunan şifreli depolamada tutulur. Uygulama verileri Android
+  bulut yedeğine alınmaz. Uygulamayı sildiğinizde bu veriler de silinir.
+</p>
+
+<h3>3.10 Web sitesi</h3>
+<p>
+  <code>vpnfastultra.github.io</code> GitHub Pages üzerinde barındırılan statik bir
+  sitedir; çerez veya analiz aracı kullanmaz. Barındırma sağlayıcısı GitHub, güvenlik
+  amacıyla ziyaretçilerin IP adreslerini kendi
+  <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">gizlilik bildirimi</a>
+  kapsamında kaydedebilir.
+</p>
+
+<h3>3.11 İşlemediğimiz veriler</h3>
+<ul>
+  <li>Ad, soyad, e-posta, telefon numarası (bize kendiniz yazmadıkça)</li>
+  <li>Ziyaret edilen siteler, DNS sorguları, trafik içeriği, bağlantı geçmişi</li>
+  <li>Hassas konum; rehber, fotoğraf, dosya veya cihazdaki diğer içerikler</li>
+  <li>KVKK m.6 anlamında özel nitelikli kişisel veriler (sağlık, inanç, biyometrik vb.)</li>
+</ul>
+
+<h2>4. İşleme amaçları ve hukuki sebepler</h2>
+<div class="tablo"><table>
+  <tr><th>Amaç</th><th>İlgili veriler</th><th>KVKK m.5</th><th>GDPR m.6</th></tr>
+  <tr><td>Anonim kimlik oluşturmak, VPN yapılandırmasını ve cihaz kaydını oluşturmak, tüneli kurmak</td><td>3.1, 3.2, 3.3</td><td>m.5/2(c) sözleşmenin kurulması ve ifası</td><td>m.6/1(b) sözleşmenin ifası</td></tr>
+  <tr><td>Katmanı (hız ve sunucu) uygulamak, kapasiteyi ve yoğunluk göstergesini yönetmek, kullanılmayan kayıtları silmek</td><td>3.2, 3.4 (bellekteki sayaçlar)</td><td>m.5/2(c); m.5/2(f) meşru menfaat</td><td>m.6/1(b) ve (f)</td></tr>
+  <tr><td>Aboneliği doğrulamak, tek cihaz kuralını uygulamak, iade ve iptalleri yansıtmak</td><td>3.1, 3.7</td><td>m.5/2(c)</td><td>m.6/1(b)</td></tr>
+  <tr><td>Ödüllü reklamın ödülünü doğrulamak ve uygulamak</td><td>3.6</td><td>m.5/2(c)</td><td>m.6/1(b)</td></tr>
+  <tr><td>Ücretsiz katmanda reklam göstermek ve ölçmek</td><td>3.5</td><td>m.5/2(f) meşru menfaat (hizmetin ücretsiz sunulabilmesi)</td><td>AEA/BK/İsviçre'de m.6/1(a) açık rıza (onay formu); diğer yerlerde m.6/1(f)</td></tr>
+  <tr><td>Hizmetin güvenliği, kötüye kullanımın ve aşırı yükün önlenmesi, şikâyetlerin incelenmesi</td><td>3.1–3.4</td><td>m.5/2(f); m.5/2(e) bir hakkın tesisi, kullanılması veya korunması</td><td>m.6/1(f)</td></tr>
+  <tr><td>Destek taleplerini ve veri sahibi başvurularını yanıtlamak</td><td>3.8</td><td>m.5/2(c); m.5/2(ç) hukuki yükümlülük (KVKK m.13); m.5/2(e)</td><td>m.6/1(b), (c) ve (f)</td></tr>
+  <tr><td>Muhasebe ve vergi yükümlülükleri</td><td>3.7 (satış raporları)</td><td>m.5/2(a) kanunlarda açıkça öngörülme; m.5/2(ç)</td><td>m.6/1(c)</td></tr>
+  <tr><td>Yetkili makamların hukuka uygun taleplerini karşılamak</td><td>Elimizde bulunan veriler (bkz. 11)</td><td>m.5/2(ç); m.5/2(e)</td><td>m.6/1(c) ve (f)</td></tr>
+</table></div>
+<p>
+  Hizmetin çalışması için 3.1–3.3'teki teknik veriler zorunludur; bunlar
+  işlenmeden VPN bağlantısı kurulamaz. Reklam kişiselleştirmesine izin vermemek
+  hizmeti kullanmanızı engellemez. Hakkınızda yalnızca otomatik işlemeye dayalı,
+  hukuki sonuç doğuran veya sizi benzer şekilde önemli ölçüde etkileyen bir karar
+  vermeyiz; profil oluşturmayız (Google'ın kendi reklam işlemleri 3.5'te
+  açıklanmıştır).
+</p>
+
+<h2>5. Verilerin aktarıldığı taraflar</h2>
+<div class="tablo"><table>
+  <tr><th>Alıcı</th><th>Rolü ve amacı</th><th>Veriler</th><th>Verinin bulunduğu yer</th></tr>
+  <tr><td>Supabase, Inc.</td><td>Veri işleyen: veritabanı, anonim kimlik ve sunucu fonksiyonları</td><td>3.1, 3.2, 3.3 (oturum kaydı), 3.6, 3.7</td><td>AB — Frankfurt, Almanya (Amazon Web Services altyapısı); şirket ABD merkezli</td></tr>
+  <tr><td>Hetzner Online GmbH</td><td>Veri işleyen: VPN sunucularının barındırılması</td><td>Sunucu üzerinden geçen şifreli trafik, bellekteki bağlantı bilgileri (3.3, 3.4)</td><td>Almanya</td></tr>
+  <tr><td>Cloudflare, Inc.</td><td>DNS çözümleme hizmeti</td><td>DNS sorguları (VPN sunucusunun adresiyle)</td><td>Küresel ağ; şirket ABD merkezli</td></tr>
+  <tr><td>Google (Google LLC; AEA ve İsviçre'deki kullanıcılar için Google Ireland Limited)</td><td>AdMob: reklam ve ödül doğrulaması — kendi amaçları için bağımsız veri sorumlusu olarak da işler</td><td>3.5, 3.6</td><td>ABD ve Google'ın diğer veri merkezleri</td></tr>
+  <tr><td>Google (Google Play)</td><td>Satın alma ve ödeme (birçok ülkede satıcı sıfatıyla), abonelik doğrulaması, uygulama dağıtımı</td><td>3.7</td><td>ABD ve Google'ın diğer veri merkezleri</td></tr>
+  <tr><td>Google (Gmail)</td><td>Destek e-postasının barındırılması</td><td>3.8</td><td>ABD ve Google'ın diğer veri merkezleri</td></tr>
+  <tr><td>GitHub, Inc.</td><td>Web sitesinin barındırılması</td><td>Site ziyaretçilerinin IP adresi (3.10)</td><td>ABD</td></tr>
+  <tr><td>Yetkili kamu kurum ve kuruluşları, mahkemeler</td><td>Hukuken zorunlu olduğunda</td><td>Elimizde bulunan asgari veriler (bkz. 11)</td><td>Talebin geldiği ülke</td></tr>
+</table></div>
+<p>
+  Verileriniz <strong>satılmaz</strong>; pazarlama veya veri ticareti amacıyla
+  hiç kimseye aktarılmaz. Hizmet sağlayıcılarımız verileri yalnızca bize hizmet
+  vermek için ve sözleşmelerimiz çerçevesinde işler; Google reklam ve Google Play
+  hizmetleri kapsamında verileri ayrıca kendi politikalarına göre işler.
+</p>
+
+<h2>6. Yurt dışına aktarım</h2>
+<p>
+  Sunucularımız ve hizmet sağlayıcılarımız Türkiye dışında olduğu için
+  5. bölümdeki aktarımlar KVKK bakımından yurt dışına aktarımdır. Bu aktarımlar
+  için KVKK m.9'un öngördüğü uygun güvenceyi, Kişisel Verileri Koruma Kurulu'nun
+  ilan ettiği <strong>standart sözleşmelerin</strong> hizmet sağlayıcılarımızla
+  imzalanması ve imzadan itibaren beş iş günü içinde Kurum'a bildirilmesi yoluyla
+  sağlama sürecindeyiz; süreç tamamlandığında bu bölüm güncellenecektir. Yurt
+  dışına aktarım için açık rızanıza dayanmıyoruz.
+</p>
+<p>
+  Avrupa Ekonomik Alanı ve Birleşik Krallık'taki kullanıcılar için: VPN
+  sunucularımız ve veritabanımız AB'dedir. AB dışına (ABD'ye) yapılan aktarımlar,
+  alıcının katıldığı durumlarda AB–ABD Veri Gizliliği Çerçevesi'ne (Google ve
+  Cloudflare) veya Avrupa Komisyonu'nun standart sözleşme maddelerine (sağlayıcıların
+  veri işleme sözleşmeleri) dayanır. Bu güvencelerin bir kopyasını 9.4'teki
+  yöntemle isteyebilirsiniz.
+</p>
+
+<h2>7. Saklama süreleri ve imha</h2>
+<ul>
+  <li><strong>Oturum kaydındaki IP adresi ve istemci bilgisi:</strong> en geç 10 dakika içinde silinir.</li>
+  <li><strong>Supabase platform kayıtları:</strong> Supabase'in saklama süresi (plana göre 1 ila 7 gün).</li>
+  <li><strong>Sunucu belleğindeki gerçek IP ve port:</strong> cihaz kaydınız sunucudan kaldırılana veya sunucu yeniden başlatılana kadar; yeni bağlantıda üzerine yazılır.</li>
+  <li><strong>Cihaz kaydı:</strong> 14 gün boyunca hiç bağlanılmazsa otomatik silinir; tekrar bağlandığınızda yeni kayıt oluşturulur. Başka bir cihaza geçtiğinizde eski kayıt silinir.</li>
+  <li><strong>Ödüllü reklam işlem kayıtları:</strong> 30 gün.</li>
+  <li><strong>Anonim kimlik ve ona bağlı tüm kayıtlar</strong> (cihaz kaydı, ödül bitiş zamanı, abonelik kaydı): 180 gün boyunca hiç kullanılmazsa ve geçerli bir abonelik yoksa otomatik silinir.</li>
   <li><strong>Sunucu işletim kaydı:</strong> 7 gün.</li>
-  <li>Uygulamayı silerseniz cihazınızdaki anahtar ve oturum bilgisi de silinir. Silme talebinizi ilettiğinizde kayıtlarınız en geç 30 gün içinde silinir.</li>
+  <li><strong>Google Play satış ve ödeme raporları:</strong> vergi ve ticaret mevzuatındaki saklama süreleri boyunca (vergi mevzuatı uyarınca 5 yıl; ticari defter ve belgeler için 10 yıla kadar).</li>
+  <li><strong>Destek ve başvuru yazışmaları:</strong> talebin sonuçlanmasından itibaren 2 yıl; bir uyuşmazlık varsa sonuçlanana kadar.</li>
+  <li><strong>Cihazınızdaki veriler:</strong> uygulamayı silene kadar.</li>
 </ul>
-
-<h2>5. Aktarılan taraflar ve yurt dışı aktarım</h2>
-<table>
-  <tr><th>Kim</th><th>Ne için</th><th>Nerede</th></tr>
-  <tr><td>Supabase</td><td>Veritabanı ve anonim kimlik altyapısı</td><td>Almanya (AB)</td></tr>
-  <tr><td>Hetzner</td><td>VPN sunucularının barındırılması</td><td>Almanya (AB)</td></tr>
-  <tr><td>Cloudflare</td><td>DNS çözümleme (bkz. 2.5)</td><td>Küresel ağ</td></tr>
-  <tr><td>Google AdMob</td><td>Ücretsiz kullanımda reklam ve ödül bildirimi (bkz. 2.6)</td><td>ABD ve diğer ülkeler</td></tr>
-  <tr><td>Google Play</td><td>Abonelik ödemesi ve doğrulaması (bkz. 2.7)</td><td>ABD ve diğer ülkeler</td></tr>
-</table>
 <p>
-  Bu hizmet sağlayıcılar verileri bize hizmet vermek ya da kendi politikaları
-  kapsamında (Google reklamları) işler. Türkiye'den bakıldığında bu aktarımlar
-  yurt dışına aktarım niteliğindedir ve sağlayıcıların veri işleme sözleşmeleri
-  kapsamında yapılır. Verileriniz satılmaz; pazarlama veya veri ticareti
-  amacıyla kimseye aktarılmaz.
+  Süresi dolan veriler otomatik görevlerle silinir. Silinen kayıtlar, altyapı
+  sağlayıcısının varsa otomatik yedeklerinde, yedeğin saklama süresi dolana kadar
+  (en fazla 7 gün) kalabilir. Silme talebinizde kayıtlarınızı en geç 30 gün
+  içinde sileriz; mevzuat gereği saklamak zorunda olduğumuz veriler (ör. muhasebe
+  kayıtları) bu süre bitince silinir.
 </p>
 
-<h2>6. Haklarınız</h2>
+<h2>8. Güvenlik</h2>
+<ul>
+  <li>Cihazınızla VPN sunucusu arasındaki trafik WireGuard protokolüyle uçtan uca şifrelenir. Uygulama ile arka uç arasındaki tüm iletişim HTTPS (TLS) üzerinden yapılır.</li>
+  <li>Özel anahtarınız cihazınızdan çıkmaz; cihazda Android Keystore korumalı şifreli depolamada tutulur.</li>
+  <li>Veritabanında satır düzeyinde erişim kuralları uygulanır; uygulama yalnızca kendi kayıtlarını okuyabilir, abonelik ve cihaz kayıtlarını yalnızca doğrulama yapan sunucu fonksiyonları yazabilir.</li>
+  <li>VPN sunucusu veritabanına yalnızca kendi cihaz listesini okuyabilen dar yetkili bir anahtarla erişir; sunucunun özel anahtarı yalnızca sunucuda durur.</li>
+  <li>Tünelden sunucunun kendi servislerine ve iç ağlara erişim kapalıdır; gecikme ölçüm servisi ve önündeki HTTPS sunucusu istek kaydı tutmaz.</li>
+</ul>
 <p>
-  KVKK m.11 ve GDPR kapsamında; verilerinizin işlenip işlenmediğini öğrenme,
-  bilgi ve kopya isteme (taşınabilirlik), düzeltme, silme, işlemenin
-  kısıtlanmasını isteme, işlemeye itiraz etme, aktarıldığı tarafları öğrenme ve
-  zarara uğramanız halinde tazminat isteme haklarınız vardır. Reklam izninizi
-  Ayarlar'dan her zaman geri çekebilirsiniz.
-</p>
-<p>
-  Talebinizi <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
-  adresine iletin; üyelik olmadığı için kaydınızı bulabilmemiz adına uygulamada
-  <strong>Aboneliğim</strong> ekranındaki cihaz kimliğini (dokununca tamamı
-  kopyalanır) yazmanız gerekir. Talepler en geç 30 gün içinde yanıtlanır.
-  Yanıtımızdan memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na ya da
-  bulunduğunuz ülkenin veri koruma otoritesine şikâyette bulunabilirsiniz.
+  Hiçbir sistem tamamen risksiz değildir. Verilerinizi etkileyen bir ihlal
+  olursa mevzuatın öngördüğü şekilde Kişisel Verileri Koruma Kurulu'na (en geç
+  72 saat içinde) ve gerekli hallerde ilgili veri koruma otoritelerine bildirimde
+  bulunur, mümkün olan yollarla sizi bilgilendiririz.
 </p>
 
-<h2>7. Çocuklar</h2>
+<h2>9. Haklarınız</h2>
+
+<h3>9.1 KVKK m.11 kapsamındaki haklar</h3>
+<ol type="a">
+  <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
+  <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+  <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+  <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme,</li>
+  <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+  <li>KVKK m.7'deki şartlar çerçevesinde silinmesini veya yok edilmesini isteme,</li>
+  <li>Düzeltme, silme ve yok etme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+  <li>İşlenen verilerin münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme,</li>
+  <li>Kanuna aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme.</li>
+</ol>
+
+<h3>9.2 AEA, Birleşik Krallık ve İsviçre'deki kullanıcıların hakları</h3>
 <p>
-  Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve bilerek onlardan
-  veri toplamaz.
+  GDPR (ve Birleşik Krallık GDPR'ı) kapsamında erişim, düzeltme, silme,
+  işlemenin kısıtlanması, veri taşınabilirliği ve meşru menfaate dayanan işlemeye
+  itiraz haklarına sahipsiniz. Rızaya dayanan işlemeler için rızanızı her zaman
+  geri çekebilirsiniz (reklam izni için Ayarlar &gt; Reklam gizlilik
+  seçenekleri); geri çekme, öncesindeki işlemenin hukuka uygunluğunu etkilemez.
+  Bulunduğunuz ülkedeki veri koruma denetim makamına şikâyette bulunabilirsiniz.
 </p>
 
-<h2>8. Değişiklikler</h2>
+<h3>9.3 ABD eyaletlerindeki kullanıcılar</h3>
 <p>
-  Bu politika değişirse bu sayfa güncellenir ve yukarıdaki tarih yenilenir.
+  Kişisel bilgilerinizi para karşılığında satmayız. Ücretsiz katmanda Google
+  AdMob'un kişiselleştirilmiş reklamları bazı ABD eyalet yasalarında (örneğin
+  California CCPA/CPRA) "çapraz bağlam davranışsal reklam için paylaşım" sayılabilir.
+  Bundan, cihazınızın reklam ayarlarından reklam kimliğinizi silerek veya Premium'a
+  geçerek kaçınabilirsiniz. Yasanın tanıdığı ölçüde bilgi alma, silme ve düzeltme
+  talebinde bulunabilirsiniz; haklarınızı kullandığınız için size farklı
+  davranılmaz.
+</p>
+
+<h3>9.4 Nasıl başvurabilirsiniz?</h3>
+<p>
+  Hesap olmadığı için kaydınızı yalnızca anonim kimlik numarasıyla bulabiliriz.
+  Lütfen başvurunuza uygulamadaki <strong>Aboneliğim</strong> ekranında görünen
+  cihaz kimliğini (dokununca tamamı kopyalanır) ekleyin.
+</p>
+<ul>
+  <li><strong>KVKK kapsamındaki başvurular</strong> Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ uyarınca Türkçe olarak; 1. bölümdeki adrese yazılı olarak, kayıtlı elektronik posta (KEP) yoluyla ya da güvenli elektronik imza veya mobil imza ile imzalanarak <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a> adresine yapılabilir. Başvuruda adınız soyadınız, T.C. kimlik numaranız (yabancılar için uyruk ve pasaport veya kimlik numarası), tebligata esas adresiniz, varsa e-posta adresiniz ve telefon numaranız ile talebinizin konusu bulunmalıdır. Bu bilgileri yalnızca başvurunuzu yanıtlamak için kullanırız.</li>
+  <li>Kolaylık için <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a> adresine düz e-postayla gönderilen talepleri de yanıtlarız; GDPR ve diğer hukuklar kapsamındaki talepler için bu yol yeterlidir.</li>
+</ul>
+<p>
+  Başvurunuz en geç <strong>30 gün</strong> içinde ücretsiz olarak sonuçlandırılır
+  (GDPR kapsamındaki karmaşık taleplerde süre, size bildirilerek iki ay
+  uzatılabilir). İşlem ayrıca bir maliyet gerektirirse Kurul'un belirlediği
+  tarifeye göre ücret istenebilir. Talebin size ait kayda ilişkin olduğunu
+  doğrulayamazsak ek bilgi isteyebiliriz.
+</p>
+
+<h3>9.5 Şikâyet</h3>
+<p>
+  Başvurunuzun reddedilmesi, verilen yanıtı yetersiz bulmanız veya süresinde
+  yanıt verilmemesi hâlinde, yanıtı öğrendiğiniz tarihten itibaren 30 gün ve her
+  hâlde başvuru tarihinden itibaren 60 gün içinde
+  <a href="https://www.kvkk.gov.tr">Kişisel Verileri Koruma Kurulu</a>'na şikâyette
+  bulunabilirsiniz. AEA, Birleşik Krallık ve İsviçre'deki kullanıcılar ayrıca
+  yerleşim yerlerindeki veri koruma makamına başvurabilir.
+</p>
+
+<h2>10. VPN'in sınırları</h2>
+<p>
+  VPN, trafiğinizi cihazınız ile sunucumuz arasında şifreler ve ziyaret
+  ettiğiniz sitelere gerçek IP adresiniz yerine sunucumuzun adresini gösterir.
+  Sizi tamamen anonim yapmaz: oturum açtığınız hesaplar, çerezler, tarayıcı
+  parmak izi ve uygulamaların kendi veri toplama yöntemleri VPN'den etkilenmez.
+  Tünel kapalıyken veya bağlantı koptuğunda trafiğiniz VPN dışından geçebilir;
+  bunu önlemek için <strong>Ayarlar &gt; Sonlandırma anahtarı (kill switch)</strong>
+  sizi Android'in ilgili sistem ayarına götürür.
+</p>
+
+<h2>11. Yasal talepler ve kötüye kullanım</h2>
+<p>
+  Trafik içeriği, ziyaret edilen adresler ve bağlantı geçmişi kaydetmediğimiz
+  için bu tür bilgileri hiçbir talep üzerine veremeyiz. Tüm kullanıcılar
+  sunucunun ortak çıkış IP adresini paylaştığından, geçmişte belirli bir anda
+  belirli bir adresle yapılmış bir bağlantıyı belirli bir kullanıcıya bağlamamız
+  çoğu zaman mümkün değildir. Hukuka uygun ve bağlayıcı bir talep (ör. mahkeme
+  kararı) gelirse, yalnızca elimizde gerçekten bulunan asgari verileri (bkz. 3)
+  ve yalnızca hukuken zorunlu olduğu ölçüde paylaşırız; hukuken mümkünse talebi
+  size bildiririz.
+</p>
+<p>
+  Süren bir saldırı, spam veya benzeri kötüye kullanım şikâyetini incelerken,
+  sunucunun o anki bağlantı tablosu canlı olarak gözlemlenebilir ve kötüye
+  kullanıma karıştığı belirlenen anonim kimlik engellenebilir. Bu inceleme
+  kaydedilmez ve yalnızca söz konusu olay için yapılır.
+</p>
+<p>
+  Mevzuat bizi ileride ek veri tutmakla yükümlü kılarsa, bunu uygulamadan önce
+  bu politikayı güncelleyip size bildiririz.
+</p>
+
+<h2>12. Çocuklar</h2>
+<p>
+  Uygulama 18 yaşından küçüklere yönelik değildir ve Google Play'de 18 yaş ve
+  üzeri kullanıcılara yönelik olarak sunulur. Üyelik olmadığı için yaş
+  doğrulaması yapmayız ve bilerek çocuklardan veri toplamayız. Bir çocuğun
+  uygulamayı kullandığını düşünüyorsanız bize yazın; ilgili kaydı sileriz.
+</p>
+
+<h2>13. Değişiklikler</h2>
+<p>
+  Bu politikayı hizmet veya mevzuat değiştikçe güncelleyebiliriz. Güncel metin
+  her zaman bu adreste yayımlanır ve sürüm tarihi yenilenir. Verilerinizin
+  işlenme biçimini önemli ölçüde değiştiren güncellemeleri yürürlüğe girmeden
+  önce uygulama içinde duyururuz; yeni bir amaç için rızanız gerekiyorsa ayrıca
+  rızanızı isteriz.
+</p>
+
+<h2>14. Dil</h2>
+<p>
+  Bu politika Türkçe ve İngilizce yayımlanır. Türkçe metin esastır; İngilizce
+  metin bilgi amaçlı çeviridir.
 </p>
 
 <footer>
   VPN Fast Ultra &middot; <code>com.vpnfastultra.app</code> &middot;
-  <a href="hizmet-sartlari.html">Hizmet şartları</a>
+  Özdemir Bilişim ve Teknoloji Hizmetleri &middot;
+  <a href="hizmet-sartlari.html">Hizmet Şartları</a>
 </footer>
 </main>
