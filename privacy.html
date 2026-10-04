@@ -43,7 +43,7 @@
 <main>
 <header>
   <h1>VPN Fast Ultra — Privacy Policy</h1>
-  <p class="tarih">Effective date: 4 October 2026 · Version 2.0 · <a href="gizlilik.html">Türkçe</a></p>
+  <p class="tarih">Effective date: 4 October 2026 · Version 2.1 · <a href="gizlilik.html">Türkçe</a></p>
 </header>
 
 <p>
@@ -137,7 +137,7 @@
   <li>We do <strong>not log</strong> the websites you visit, the apps you use, the content of tunnel traffic or your connection history (when you connected and to where).</li>
   <li>To enforce the speed limit and feed the data counter in the app, the VPN server keeps transferred byte counts <strong>in memory only</strong>; these counters are not written to disk.</li>
   <li>The server's operational log contains only totals such as device counts; no device key or IP address is written. It is deleted after 7 days.</li>
-  <li><strong>DNS:</strong> while the tunnel is on, your domain name lookups go through the tunnel to Cloudflare's <code>1.1.1.1</code> resolver. We do not log them. Cloudflare sees the VPN server's address, not your real IP address, and processes queries under its <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 privacy commitments</a> (querying IP addresses are not written to persistent storage and logs are deleted within 25 hours).</li>
+  <li><strong>DNS:</strong> while the tunnel is on, your domain name lookups are answered by our own DNS resolver running on the VPN server you are connected to; they are not sent to a third-party DNS provider. Queries are not logged (query logging is off); the resolver only keeps domain answers in a short-lived cache.</li>
 </ul>
 
 <h3>3.5 Ads (free use only)</h3>
@@ -253,7 +253,6 @@
   <tr><th>Recipient</th><th>Role and purpose</th><th>Data</th><th>Where the data is</th></tr>
   <tr><td>Supabase, Inc.</td><td>Processor: database, anonymous identity and server functions</td><td>3.1, 3.2, 3.3 (session record), 3.6, 3.7</td><td>EU — Frankfurt, Germany (Amazon Web Services infrastructure); company based in the USA</td></tr>
   <tr><td>Hetzner Online GmbH</td><td>Processor: hosting of the VPN servers</td><td>Encrypted traffic passing through the server, in-memory connection data (3.3, 3.4)</td><td>Germany</td></tr>
-  <tr><td>Cloudflare, Inc.</td><td>DNS resolution</td><td>DNS queries (with the VPN server's address)</td><td>Global network; company based in the USA</td></tr>
   <tr><td>Google (Google LLC; Google Ireland Limited for users in the EEA and Switzerland)</td><td>AdMob: ads and reward verification — also processes as an independent controller for its own purposes</td><td>3.5, 3.6</td><td>USA and Google's other data centres</td></tr>
   <tr><td>Google (Google Play)</td><td>Purchase and payment (as merchant of record in many countries), subscription verification, app distribution</td><td>3.7</td><td>USA and Google's other data centres</td></tr>
   <tr><td>Google (Gmail)</td><td>Hosting of the support mailbox</td><td>3.8</td><td>USA and Google's other data centres</td></tr>
@@ -272,7 +271,7 @@
 <p>
   For users in the EEA and the UK: our VPN servers and our database are in the
   EU. Transfers outside the EU (to the USA) rely, where the recipient
-  participates, on the EU–US Data Privacy Framework (Google and Cloudflare) or on
+  participates, on the EU–US Data Privacy Framework (Google) or on
   the European Commission's Standard Contractual Clauses (in the providers' data
   processing agreements). You can request a copy of these safeguards using the
   method in 9.4.

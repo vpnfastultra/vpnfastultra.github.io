@@ -43,7 +43,7 @@
 <main>
 <header>
   <h1>VPN Fast Ultra — Gizlilik Politikası ve KVKK Aydınlatma Metni</h1>
-  <p class="tarih">Yürürlük tarihi: 4 Ekim 2026 · Sürüm 2.0 · <a href="privacy.html">English</a></p>
+  <p class="tarih">Yürürlük tarihi: 4 Ekim 2026 · Sürüm 2.1 · <a href="privacy.html">English</a></p>
 </header>
 
 <p>
@@ -136,7 +136,7 @@
   <li>Ziyaret ettiğiniz siteleri, kullandığınız uygulamaları, tünelden geçen trafiğin içeriğini ve bağlantı geçmişinizi (hangi saatte nereye bağlandığınızı) <strong>kaydetmeyiz</strong>.</li>
   <li>VPN sunucusu, hız sınırını uygulamak ve uygulamadaki veri göstergesini beslemek için aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar; bu sayaçlar diske yazılmaz.</li>
   <li>Sunucunun işletim kaydında yalnızca cihaz sayısı gibi toplam bilgiler bulunur; cihaz anahtarı veya IP adresi yazılmaz. Bu kayıt 7 gün sonra silinir.</li>
-  <li><strong>DNS:</strong> tünel açıkken alan adı sorgularınız tünelin içinden Cloudflare'in <code>1.1.1.1</code> çözümleyicisine gider. Sorgular bizim tarafımızda kaydedilmez. Cloudflare sorguyu sizin gerçek IP adresinizle değil, VPN sunucusunun adresiyle görür ve kendi <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 gizlilik taahhüdü</a> kapsamında işler (sorgulayan IP adresini kalıcı depolamaya yazmama ve kayıtları 25 saat içinde silme).</li>
+  <li><strong>DNS:</strong> tünel açıkken alan adı sorgularınız, bağlandığınız VPN sunucusunun üzerinde çalışan kendi DNS çözümleyicimiz tarafından yanıtlanır; üçüncü bir DNS sağlayıcısına gönderilmez. Sorgular kaydedilmez (sorgu günlüğü kapalıdır); çözümleyici yalnızca alan adı yanıtlarını kısa süreli önbellekte tutar.</li>
 </ul>
 
 <h3>3.5 Reklamlar (yalnızca ücretsiz kullanım)</h3>
@@ -256,7 +256,6 @@
   <tr><th>Alıcı</th><th>Rolü ve amacı</th><th>Veriler</th><th>Verinin bulunduğu yer</th></tr>
   <tr><td>Supabase, Inc.</td><td>Veri işleyen: veritabanı, anonim kimlik ve sunucu fonksiyonları</td><td>3.1, 3.2, 3.3 (oturum kaydı), 3.6, 3.7</td><td>AB — Frankfurt, Almanya (Amazon Web Services altyapısı); şirket ABD merkezli</td></tr>
   <tr><td>Hetzner Online GmbH</td><td>Veri işleyen: VPN sunucularının barındırılması</td><td>Sunucu üzerinden geçen şifreli trafik, bellekteki bağlantı bilgileri (3.3, 3.4)</td><td>Almanya</td></tr>
-  <tr><td>Cloudflare, Inc.</td><td>DNS çözümleme hizmeti</td><td>DNS sorguları (VPN sunucusunun adresiyle)</td><td>Küresel ağ; şirket ABD merkezli</td></tr>
   <tr><td>Google (Google LLC; AEA ve İsviçre'deki kullanıcılar için Google Ireland Limited)</td><td>AdMob: reklam ve ödül doğrulaması — kendi amaçları için bağımsız veri sorumlusu olarak da işler</td><td>3.5, 3.6</td><td>ABD ve Google'ın diğer veri merkezleri</td></tr>
   <tr><td>Google (Google Play)</td><td>Satın alma ve ödeme (birçok ülkede satıcı sıfatıyla), abonelik doğrulaması, uygulama dağıtımı</td><td>3.7</td><td>ABD ve Google'ın diğer veri merkezleri</td></tr>
   <tr><td>Google (Gmail)</td><td>Destek e-postasının barındırılması</td><td>3.8</td><td>ABD ve Google'ın diğer veri merkezleri</td></tr>
@@ -283,8 +282,7 @@
 <p>
   Avrupa Ekonomik Alanı ve Birleşik Krallık'taki kullanıcılar için: VPN
   sunucularımız ve veritabanımız AB'dedir. AB dışına (ABD'ye) yapılan aktarımlar,
-  alıcının katıldığı durumlarda AB–ABD Veri Gizliliği Çerçevesi'ne (Google ve
-  Cloudflare) veya Avrupa Komisyonu'nun standart sözleşme maddelerine (sağlayıcıların
+  alıcının katıldığı durumlarda AB–ABD Veri Gizliliği Çerçevesi'ne (Google) veya Avrupa Komisyonu'nun standart sözleşme maddelerine (sağlayıcıların
   veri işleme sözleşmeleri) dayanır. Bu güvencelerin bir kopyasını 9.4'teki
   yöntemle isteyebilirsiniz.
 </p>
