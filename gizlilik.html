@@ -41,153 +41,181 @@
 <main>
 <header>
   <h1>VPN Fast Ultra — Gizlilik Politikası</h1>
-  <p class="tarih">Son güncelleme: 13 Eylül 2026</p>
+  <p class="tarih">Son güncelleme: 4 Ekim 2026</p>
 </header>
 
 <p>
   Bu politika, <strong>VPN Fast Ultra</strong> (Google Play paket adı
-  <code>com.vpnfastultra.app</code>) uygulamasının hangi verileri işlediğini
-  anlatır. Kısa tutulmaya ve gerçekte olan biteni yazmaya çalışıldı.
+  <code>com.vpnfastultra.app</code>) uygulamasının hangi verileri işlediğini,
+  ne kadar sakladığını ve kimlerle paylaştığını anlatır. Gerçekte olan biteni
+  yazmaya çalıştık; bir ifade uygulamanın davranışıyla çelişirse bize yazın.
 </p>
 
 <div class="kutu">
   <strong>Özet:</strong> Uygulama üyelik istemez; ad, e-posta, telefon numarası
-  toplamaz. Hangi siteleri ziyaret ettiğiniz, DNS sorgularınız ve tünelden geçen
-  trafiğinizin içeriği <strong>kaydedilmez</strong>. Saklanan şey, cihazınıza
-  tünel kurabilmek için gereken teknik asgaridir. Verileriniz
-  <strong>asla satılmaz</strong> ve ücretsiz katmandaki reklam ağı dışında
-  <strong>hiçbir üçüncü tarafla paylaşılmaz</strong>; abonelikte reklam
-  olmadığı için hiçbir şey paylaşılmaz.
+  toplamaz. Ziyaret ettiğiniz siteler ve tünelden geçen trafiğinizin içeriği
+  <strong>kaydedilmez</strong>. Saklanan şey, cihazınıza tünel kurabilmek için
+  gereken teknik asgaridir ve kısa sürelerle tutulur (bkz. 4). Verileriniz
+  <strong>satılmaz</strong> ve ücretsiz katmandaki reklam ağı ile aşağıda
+  sayılan altyapı sağlayıcıları dışında üçüncü taraflarla paylaşılmaz.
+  Abonelikte reklam yoktur; abone olunca reklam altyapısı hiç çalıştırılmaz.
 </div>
 
 <h2>1. Veri sorumlusu</h2>
 <p>
-  Uygulamayı geliştiren ve sunucuları işleten: Google Play'de
-  <strong>Özdemir Bilişim ve Teknoloji Hizmetleri</strong> geliştirici adıyla listelenen VPN Fast Ultra
-  geliştiricisi. İletişim:
+  Uygulamayı geliştiren ve sunucuları işleten:
+  <strong>Özdemir Bilişim ve Teknoloji Hizmetleri</strong> (Google Play geliştirici adı).
+  İletişim ve tüm veri talepleri için:
   <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
 </p>
 
-<h2>2. Toplanan veriler</h2>
+<h2>2. İşlenen veriler</h2>
 
 <h3>2.1 Hesap yerine anonim kimlik</h3>
 <p>
   Uygulamayı ilk açtığınızda arka planda <strong>anonim bir kimlik</strong>
-  oluşturulur. Bu, rastgele üretilmiş bir numaradan (UUID) ibarettir. Sizden
-  hiçbir bilgi istenmez ve bu numara kimliğinizle ilişkilendirilemez. Kayıt
-  ekranı olmadığı için ad, soyad, e-posta ve telefon numarası hiçbir zaman
-  toplanmaz.
+  oluşturulur: rastgele üretilmiş bir numara (UUID). Sizden hiçbir bilgi
+  istenmez; ad, soyad, e-posta ve telefon numarası toplanmaz. Bu numara tek
+  başına sizi tanımlamaz; ancak aşağıda sayılan teknik kayıtlarla (abonelik
+  jetonu, cihaz kaydı) aynı numara altında tutulur.
 </p>
 
-<h3>2.2 Bağlantı için saklanan teknik veriler</h3>
+<h3>2.2 Bağlantı için saklanan teknik veriler (cihaz kaydı)</h3>
 <table>
   <tr><th>Veri</th><th>Neden gerekli</th></tr>
   <tr><td>Anonim kimlik numarası</td><td>Aboneliğin ve cihaz kaydının kime ait olduğunu bilmek</td></tr>
   <tr><td>Cihazın WireGuard <em>açık</em> anahtarı</td><td>Sunucunun cihazı tanıyıp şifreli tünel kurabilmesi</td></tr>
-  <tr><td>Tünel içi IP adresi (örn. 10.66.66.5)</td><td>Tünelin içinde cihaza adres vermek; bu adres yalnızca tünelin içinde geçerlidir</td></tr>
-  <tr><td>Cihaz etiketi (örn. &laquo;Android&raquo;)</td><td>Birden fazla cihaz kaydında ayırt etmek</td></tr>
-  <tr><td>Kaydın oluşturulma ve güncellenme zamanı</td><td>Kullanılmayan kayıtları temizlemek</td></tr>
+  <tr><td>Tünel içi IP adresi (örn. 10.66.66.5)</td><td>Tünelin içinde cihaza adres vermek; yalnızca tünelin içinde geçerlidir</td></tr>
+  <tr><td>Cihaz etiketi (örn. &laquo;Android&raquo;)</td><td>Kaydı tanımlamak</td></tr>
   <tr><td>Bağlandığınız sunucu</td><td>Doğru sunucuya yönlendirmek ve kapasiteyi yönetmek</td></tr>
-  <tr><td>Son el sıkışma zamanı (dakika hassasiyetinde)</td><td>Sunucudaki aktif cihaz sayısını sayıp uygulamada "yoğunluk" göstergesini beslemek</td></tr>
+  <tr><td>Kayıt ve son el sıkışma zamanı (saniye hassasiyetinde)</td><td>Sunucudaki aktif cihaz sayısını sayıp "yoğunluk" göstergesini beslemek ve kullanılmayan kayıtları silmek</td></tr>
 </table>
 <p>
-  Cihazınızın <strong>özel</strong> WireGuard anahtarı cihazınızda üretilir,
-  şifreli olarak cihazınızda saklanır ve <strong>hiçbir zaman</strong> bize
-  gönderilmez.
+  Her anonim kimlik için tek bir cihaz kaydı tutulur. Cihazınızın
+  <strong>özel</strong> WireGuard anahtarı cihazınızda üretilir, şifreli olarak
+  cihazınızda saklanır ve <strong>hiçbir zaman</strong> bize gönderilmez.
 </p>
 
-<h3>2.3 Toplanmayanlar</h3>
+<h3>2.3 IP adresi</h3>
 <ul>
-  <li>Ziyaret ettiğiniz siteler, uygulamalar veya DNS sorgularınız</li>
-  <li>Tünelden geçen trafiğin içeriği</li>
-  <li>Gerçek IP adresinizin kaydı (bağlantı kurmak için anlık olarak kullanılır, kaydedilmez; bkz. 2.6)</li>
-  <li>Konum bilgisi</li>
-  <li>Rehber, fotoğraf, dosya veya cihazdaki diğer içerikler</li>
+  <li><strong>VPN sunucusu:</strong> bağlı olduğunuz sürece WireGuard, paketleri size geri gönderebilmek için cihazınızın o anki gerçek IP adresini ve portunu <em>bellekte</em> tutar. Bu bilgi diske yazılmaz, kayıt dosyasına geçmez ve sunucu yeniden başladığında kaybolur.</li>
+  <li><strong>Hesap altyapısı (Supabase):</strong> uygulama oturum açtığında Supabase kendi oturum kaydına isteğin geldiği IP adresini ve tarayıcı bilgisini yazar. Bu alanları <strong>10 dakikada bir otomatik olarak sileriz</strong>. Supabase'in altyapı (ağ geçidi) kayıtları da istek IP adreslerini kendi işletim süresince kısa bir süre tutar.</li>
+  <li>IP adresinizi konum bulmak, profil çıkarmak veya başka bir amaçla kullanmayız.</li>
+</ul>
+
+<h3>2.4 Toplanmayanlar</h3>
+<ul>
+  <li>Ziyaret ettiğiniz siteler, kullandığınız uygulamalar, tünelden geçen trafiğin içeriği</li>
+  <li>Bağlantı geçmişi (hangi saatte nereye bağlandığınız)</li>
+  <li>Konum bilgisi; rehber, fotoğraf, dosya veya cihazdaki diğer içerikler</li>
 </ul>
 <p>
-  VPN sunucusu, aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar;
-  bu sayaçlar diske yazılmaz ve sunucu yeniden başladığında kaybolur. Son el
-  sıkışma zamanı ise dakikada bir, dakika hassasiyetinde veritabanındaki cihaz
-  kaydına yazılır. Bunun tek kullanımı, her sunucudaki aktif cihaz sayısını
-  sayıp uygulamada "yoğunluk düşük / orta / yüksek" göstergesini beslemektir;
-  hangi siteye gittiğinizle veya ne kadar veri aktardığınızla ilişkilendirilmez
-  ve cihaz kaydı durduğu sürece saklanır.
+  VPN sunucusu aktarılan bayt sayısını <strong>yalnızca bellekte</strong> tutar
+  (hız sınırı ve uygulamadaki MB göstergesi için); bu sayaçlar diske yazılmaz.
+  Sunucunun işletim kaydında cihaz sayısı gibi toplam bilgiler bulunur; cihaz
+  anahtarı veya IP adresi yazılmaz ve kayıt 7 günde bir silinir.
 </p>
 
-<h3>2.4 Reklamlar</h3>
+<h3>2.5 DNS</h3>
 <p>
-  Ücretsiz kullanımda Google AdMob üzerinden reklam gösterilir. Reklamların
-  seçilmesi ve ölçülmesi için Google, cihazınızın reklam kimliği gibi verileri
-  kendi politikası kapsamında işleyebilir. Bu veriler bize aktarılmaz; Google'ın
-  uygulaması için
+  Tünel açıkken alan adı sorgularınız (DNS) tünelin içinden Cloudflare'in
+  <code>1.1.1.1</code> çözümleyicisine gider. Sorgular bizim tarafımızda
+  kaydedilmez; Cloudflare bunları kendi
+  <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 gizlilik taahhüdü</a>
+  kapsamında işler. Cloudflare sorgunun sizin gerçek IP adresinizi değil, VPN
+  sunucusunun adresini görür.
+</p>
+
+<h3>2.6 Reklamlar (yalnızca ücretsiz kullanım)</h3>
+<p>
+  Ücretsiz kullanımda Google AdMob üzerinden reklam gösterilir. Google,
+  reklamların seçilmesi ve ölçülmesi için cihazınızın reklam kimliği gibi
+  verileri kendi politikası kapsamında işler. Avrupa Ekonomik Alanı,
+  Birleşik Krallık ve İsviçre'de reklam izni Google'ın onay formuyla istenir ve
+  <strong>Ayarlar &gt; Reklam gizlilik seçenekleri</strong> üzerinden her zaman
+  değiştirilebilir. Google'ın uygulaması için
   <a href="https://policies.google.com/technologies/partner-sites">Google'ın gizlilik politikasına</a>
-  bakabilirsiniz. Abone olan kullanıcılara reklam gösterilmez.
+  bakabilirsiniz. Abone olan kullanıcılarda reklam altyapısı hiç başlatılmaz.
 </p>
 <p>
-  <strong>Ödüllü reklam:</strong> ücretsiz kullanımda bir reklamı sonuna kadar
-  izleyerek 30 dakikalığına tam hız kazanabilirsiniz. Reklam izlendiğinde Google
-  (AdMob), sunucumuza imzalı bir çağrı gönderir; bu çağrıda reklam birimi
-  kimliği, bir işlem numarası ve cihazınızın anonim kimliği bulunur. Biz
-  yalnızca işlem numarasını ve anonim kimliği saklarız — tek amacı aynı reklam
-  için ödülün iki kez verilmesini önlemektir. Hangi reklamı izlediğiniz, reklamın
-  içeriği veya bir izleme geçmişi tutulmaz.
+  <strong>Ödüllü reklam:</strong> bir reklamı sonuna kadar izleyerek 30
+  dakikalığına tam hız kazanabilirsiniz (toplam en fazla 2 saat). Ödülü
+  doğrulayabilmek için reklam yüklenirken anonim kimlik numaranız Google'a
+  iletilir; reklam izlenince Google sunucumuza imzalı bir bildirim gönderir.
+  Biz yalnızca işlem numarasını ve anonim kimliği, aynı reklam için ödülün iki
+  kez verilmesini önlemek amacıyla <strong>30 gün</strong> saklarız; tam hızın
+  bitiş zamanı cihaz kaydınızla birlikte tutulur. Hangi reklamı izlediğiniz
+  tutulmaz.
 </p>
 
-<h3>2.5 Abonelik</h3>
+<h3>2.7 Abonelik</h3>
 <p>
-  Abonelik satın alındığında ödeme Google Play üzerinden yapılır. Kart
-  bilgileriniz bize hiçbir zaman ulaşmaz. Satın alma tamamlanınca Google
-  Play'in verdiği <em>satın alma jetonu</em> (purchase token) sunucumuza
-  gönderilir; sunucumuz bu jetonu Google'ın Play Developer API'sine sorarak
-  aboneliğin gerçekten var ve geçerli olduğunu doğrular. Bizde saklanan şey
-  yalnızca bu jeton, seçtiğiniz plan (yıllık / aylık / haftalık) ve aboneliğin
-  bitiş tarihidir; ödeme yöntemi, fatura adresi veya Google hesabınızın adı bize
-  gelmez.
+  Ödeme Google Play üzerinden yapılır; kart bilgileriniz bize ulaşmaz. Satın
+  alma tamamlanınca Google Play'in verdiği <em>satın alma jetonu</em> sunucumuza
+  gönderilir ve Google Play Developer API'sine sorularak doğrulanır. Saklanan:
+  jeton, plan (yıllık / aylık / haftalık), abonelik durumu, başlangıç ve bitiş
+  tarihi. Abonelik durumu iade, iptal ve plan değişikliklerini yakalamak için
+  günde bir kez Google Play'e yeniden sorulur. Ödeme yöntemi, fatura adresi
+  veya Google hesabınızın adı bize gelmez.
 </p>
-
-<h3>2.6 Bağlantı kesilince gösterilen "Gerçek IP / Şehir"</h3>
 <p>
-  Bağlantı kesildikten sonra rapor ekranında cihazınızın o an dışarıdan görünen
-  IP adresi ve kaba konumu (ülke / şehir) gösterilir. Bu bilgi, cihazınızın
-  bizim VPN sunucumuza doğrudan yaptığı bir isteğin geldiği IP adresinden,
-  sunucu üzerindeki yerel bir GeoLite2 veritabanıyla bulunur ve yalnızca
-  cihazınıza geri gönderilir. Bu istek <strong>kaydedilmez ve loglanmaz</strong>;
-  IP adresiniz veya şehriniz hiçbir yere yazılmaz, üçüncü bir hizmete
-  sorulmaz.
+  Premium aynı anda <strong>tek bir cihazda</strong> geçerlidir. Yeni bir
+  cihazda <em>Satın almayı geri yükle</em> dediğinizde abonelik o cihaza
+  taşınır ve önceki cihaz ücretsiz kullanıma döner.
 </p>
 
-<h2>3. Verilerin nerede tutulduğu</h2>
-<p>
-  Kayıtlar Supabase üzerinde <strong>Almanya (Frankfurt)</strong> bölgesinde,
-  VPN sunucuları ise Almanya'da barındırılır. Yani veriler Avrupa Birliği
-  sınırları içinde kalır.
-</p>
+<h2>3. İşleme amaçları ve hukuki dayanak</h2>
+<table>
+  <tr><th>Amaç</th><th>Hukuki dayanak (KVKK m.5 / GDPR m.6)</th></tr>
+  <tr><td>VPN bağlantısını kurmak, katmanı ve aboneliği yönetmek</td><td>Sözleşmenin ifası</td></tr>
+  <tr><td>Kötüye kullanımı ve aşırı yükü önlemek, güvenlik</td><td>Meşru menfaat</td></tr>
+  <tr><td>Ücretsiz kullanımda reklam (AEA/BK/İsviçre'de kişiselleştirme)</td><td>Meşru menfaat; ilgili bölgelerde açık rıza (onay formu)</td></tr>
+  <tr><td>Abonelik kayıtlarını mevzuatın gerektirdiği ölçüde tutmak</td><td>Hukuki yükümlülük</td></tr>
+</table>
 
-<h2>4. Saklama süresi</h2>
+<h2>4. Saklama süreleri</h2>
 <ul>
-  <li>Cihaz kaydı, siz uygulamayı kullandığınız sürece saklanır.</li>
-  <li>Uygulamayı silerseniz cihazınızdaki anahtar ve oturum bilgisi de silinir; sunucudaki kayıt kullanılmadığı için pasifleşir.</li>
-  <li>Ödüllü reklam işlem numaraları ve abonelik doğrulama kaydı, anonim kimliğinizle birlikte cihaz kaydınız durduğu sürece saklanır.</li>
-  <li>Silme talebinizi ilettiğinizde kaydınız en geç 30 gün içinde tamamen silinir.</li>
+  <li><strong>Cihaz kaydı:</strong> 14 gün boyunca hiç bağlanılmazsa otomatik silinir. Tekrar bağlandığınızda yeni bir kayıt oluşturulur.</li>
+  <li><strong>Oturum kaydındaki IP adresi ve tarayıcı bilgisi:</strong> en geç 10 dakika içinde silinir.</li>
+  <li><strong>Ödüllü reklam işlem numaraları:</strong> 30 gün.</li>
+  <li><strong>Anonim kimlik ve ona bağlı tüm kayıtlar:</strong> 180 gün boyunca hiç kullanılmazsa (ve geçerli bir abonelik yoksa) otomatik silinir.</li>
+  <li><strong>Abonelik kaydı:</strong> anonim kimlik durduğu sürece; kimlik silinince birlikte silinir.</li>
+  <li><strong>Sunucu işletim kaydı:</strong> 7 gün.</li>
+  <li>Uygulamayı silerseniz cihazınızdaki anahtar ve oturum bilgisi de silinir. Silme talebinizi ilettiğinizde kayıtlarınız en geç 30 gün içinde silinir.</li>
 </ul>
 
-<h2>5. Üçüncü taraflar</h2>
+<h2>5. Aktarılan taraflar ve yurt dışı aktarım</h2>
 <table>
-  <tr><th>Kim</th><th>Ne için</th></tr>
-  <tr><td>Supabase</td><td>Veritabanı ve kimlik altyapısı (Almanya)</td></tr>
-  <tr><td>Hetzner</td><td>VPN sunucularının barındırılması (Almanya)</td></tr>
-  <tr><td>Google AdMob</td><td>Ücretsiz kullanımda reklam; ödüllü reklamda sunucumuza imzalı ödül bildirimi (bkz. 2.4)</td></tr>
-  <tr><td>Google Play</td><td>Abonelik ödemeleri ve satın alma jetonunun doğrulanması (bkz. 2.5)</td></tr>
+  <tr><th>Kim</th><th>Ne için</th><th>Nerede</th></tr>
+  <tr><td>Supabase</td><td>Veritabanı ve anonim kimlik altyapısı</td><td>Almanya (AB)</td></tr>
+  <tr><td>Hetzner</td><td>VPN sunucularının barındırılması</td><td>Almanya (AB)</td></tr>
+  <tr><td>Cloudflare</td><td>DNS çözümleme (bkz. 2.5)</td><td>Küresel ağ</td></tr>
+  <tr><td>Google AdMob</td><td>Ücretsiz kullanımda reklam ve ödül bildirimi (bkz. 2.6)</td><td>ABD ve diğer ülkeler</td></tr>
+  <tr><td>Google Play</td><td>Abonelik ödemesi ve doğrulaması (bkz. 2.7)</td><td>ABD ve diğer ülkeler</td></tr>
 </table>
-<p>Verileriniz bunların dışında <strong>hiç kimseyle paylaşılmaz ve asla satılmaz</strong>. Yukarıdaki dört hizmet sağlayıcı verileri yalnızca bize hizmet vermek için işler; pazarlama, profil çıkarma veya veri ticareti amacıyla kimseye aktarım yapılmaz.</p>
+<p>
+  Bu hizmet sağlayıcılar verileri bize hizmet vermek ya da kendi politikaları
+  kapsamında (Google reklamları) işler. Türkiye'den bakıldığında bu aktarımlar
+  yurt dışına aktarım niteliğindedir ve sağlayıcıların veri işleme sözleşmeleri
+  kapsamında yapılır. Verileriniz satılmaz; pazarlama veya veri ticareti
+  amacıyla kimseye aktarılmaz.
+</p>
 
 <h2>6. Haklarınız</h2>
 <p>
-  KVKK (6698 sayılı kanun) ve GDPR kapsamında; hakkınızda tutulan verileri
-  öğrenme, düzeltilmesini veya silinmesini isteme hakkınız vardır. Talebinizi
-  yukarıdaki e-posta adresine iletebilirsiniz. Uygulamada üyelik olmadığı için
-  talebinizi eşleştirebilmemiz adına cihazınızın uygulama içinde gösterilen
-  kimlik numarasını belirtmeniz gerekir.
+  KVKK m.11 ve GDPR kapsamında; verilerinizin işlenip işlenmediğini öğrenme,
+  bilgi ve kopya isteme (taşınabilirlik), düzeltme, silme, işlemenin
+  kısıtlanmasını isteme, işlemeye itiraz etme, aktarıldığı tarafları öğrenme ve
+  zarara uğramanız halinde tazminat isteme haklarınız vardır. Reklam izninizi
+  Ayarlar'dan her zaman geri çekebilirsiniz.
+</p>
+<p>
+  Talebinizi <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
+  adresine iletin; üyelik olmadığı için kaydınızı bulabilmemiz adına uygulamada
+  <strong>Aboneliğim</strong> ekranındaki cihaz kimliğini (dokununca tamamı
+  kopyalanır) yazmanız gerekir. Talepler en geç 30 gün içinde yanıtlanır.
+  Yanıtımızdan memnun kalmazsanız Kişisel Verileri Koruma Kurulu'na ya da
+  bulunduğunuz ülkenin veri koruma otoritesine şikâyette bulunabilirsiniz.
 </p>
 
 <h2>7. Çocuklar</h2>
@@ -199,10 +227,10 @@
 <h2>8. Değişiklikler</h2>
 <p>
   Bu politika değişirse bu sayfa güncellenir ve yukarıdaki tarih yenilenir.
-  Önemli bir değişiklik olursa uygulama içinde bildirilir.
 </p>
 
 <footer>
-  VPN Fast Ultra &middot; <code>com.vpnfastultra.app</code>
+  VPN Fast Ultra &middot; <code>com.vpnfastultra.app</code> &middot;
+  <a href="hizmet-sartlari.html">Hizmet şartları</a>
 </footer>
 </main>
