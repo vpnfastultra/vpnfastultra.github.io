@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VPN Fast Ultra — Privacy Policy</title>
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#085FF7">
+<meta property="og:image" content="https://vpnfastultra.github.io/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+  :root { --mavi: #157AFE; --koyu: #0F172A; --gri: #64748B; --cizgi: #E2E8F0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 0 20px 80px;
+    font: 16px/1.7 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--koyu); background: #fff;
+  }
+  main { max-width: 760px; margin: 0 auto; }
+  header { padding: 48px 0 32px; border-bottom: 1px solid var(--cizgi); margin-bottom: 32px; }
+  h1 { font-size: 30px; margin: 0 0 8px; }
+  h2 { font-size: 21px; margin: 40px 0 12px; }
+  h3 { font-size: 17px; margin: 28px 0 8px; }
+  .tarih { color: var(--gri); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--cizgi); vertical-align: top; }
+  th { background: #F2F5F9; font-weight: 600; }
+  .kutu { background: #EEF5FF; border-left: 4px solid var(--mavi); padding: 16px 18px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  a { color: var(--mavi); }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--cizgi); color: var(--gri); font-size: 14px; }
+  code { background: #F2F5F9; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  @media (max-width: 520px) { h1 { font-size: 25px; } body { padding: 0 16px 60px; } }
+</style>
+
+<main>
+<header>
+  <h1>VPN Fast Ultra — Privacy Policy</h1>
+  <p class="tarih">Last updated: 4 October 2026 · <a href="gizlilik.html">Türkçe</a></p>
+</header>
+
+<p>
+  This policy explains which data the <strong>VPN Fast Ultra</strong> app
+  (Google Play package <code>com.vpnfastultra.app</code>) processes, how long it
+  is kept and who it is shared with. We tried to describe what actually
+  happens; if any statement contradicts how the app behaves, please write to us.
+  The Turkish version is the original; this is a translation.
+</p>
+
+<div class="kutu">
+  <strong>Summary:</strong> The app requires no account and does not collect
+  your name, email or phone number. The websites you visit and the content of
+  your tunnel traffic are <strong>not logged</strong>. What we keep is the
+  technical minimum needed to set up a tunnel to your device, for short periods
+  (see 4). Your data is <strong>not sold</strong> and is not shared with third
+  parties other than the ad network in the free tier and the infrastructure
+  providers listed below. There are no ads with a subscription; once you
+  subscribe, the ad system is not started at all.
+</div>
+
+<h2>1. Data controller</h2>
+<p>
+  The app is developed and its servers are operated by
+  <strong>Özdemir Bilişim ve Teknoloji Hizmetleri</strong> (Google Play developer name).
+  Contact and all data requests:
+  <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>
+</p>
+
+<h2>2. Data we process</h2>
+
+<h3>2.1 An anonymous ID instead of an account</h3>
+<p>
+  When you first open the app, an <strong>anonymous ID</strong> is created in
+  the background: a randomly generated number (UUID). Nothing is asked of you;
+  no name, email or phone number is collected. This number does not identify
+  you on its own, but the technical records below (subscription token, device
+  record) are kept under it.
+</p>
+
+<h3>2.2 Technical data kept to connect (device record)</h3>
+<table>
+  <tr><th>Data</th><th>Why it is needed</th></tr>
+  <tr><td>Anonymous ID</td><td>To know which subscription and device record belong together</td></tr>
+  <tr><td>The device's WireGuard <em>public</em> key</td><td>So the server can recognise the device and build the encrypted tunnel</td></tr>
+  <tr><td>In-tunnel IP address (e.g. 10.66.66.5)</td><td>To address the device inside the tunnel; valid only inside the tunnel</td></tr>
+  <tr><td>Device label (e.g. &laquo;Android&raquo;)</td><td>To label the record</td></tr>
+  <tr><td>Server you connect to</td><td>To route you to the right server and manage capacity</td></tr>
+  <tr><td>Record time and last handshake time (to the second)</td><td>To count active devices per server for the "load" indicator and to delete unused records</td></tr>
+</table>
+<p>
+  One device record is kept per anonymous ID. Your device's
+  <strong>private</strong> WireGuard key is generated on your device, stored
+  encrypted on your device and is <strong>never</strong> sent to us.
+</p>
+
+<h3>2.3 IP address</h3>
+<ul>
+  <li><strong>VPN server:</strong> while you are connected, WireGuard keeps your device's current real IP address and port <em>in memory</em> so it can send packets back to you. It is not written to disk, does not appear in any log and is lost when the server restarts.</li>
+  <li><strong>Account infrastructure (Supabase):</strong> when the app signs in, Supabase writes the request's IP address and browser information to its session record. We <strong>automatically delete these fields every 10 minutes</strong>. Supabase's infrastructure (gateway) logs also keep request IP addresses for a short operational period.</li>
+  <li>We do not use your IP address to locate you, build a profile or for any other purpose.</li>
+</ul>
+
+<h3>2.4 What we do not collect</h3>
+<ul>
+  <li>Websites you visit, apps you use, the content of tunnel traffic</li>
+  <li>Connection history (when you connected and to where)</li>
+  <li>Location; contacts, photos, files or other content on your device</li>
+</ul>
+<p>
+  The VPN server keeps transferred byte counts <strong>only in memory</strong>
+  (for the speed limit and the MB display in the app); these counters are not
+  written to disk. The server's operational log contains only totals such as
+  device counts; no device key or IP address is written, and the log is deleted
+  after 7 days.
+</p>
+
+<h3>2.5 DNS</h3>
+<p>
+  While the tunnel is on, your domain name lookups (DNS) go through the tunnel
+  to Cloudflare's <code>1.1.1.1</code> resolver. We do not log the queries;
+  Cloudflare processes them under its
+  <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">1.1.1.1 privacy commitments</a>.
+  Cloudflare sees the VPN server's address, not your real IP address.
+</p>
+
+<h3>2.6 Ads (free use only)</h3>
+<p>
+  In free use, ads are shown through Google AdMob. Google processes data such
+  as your device's advertising ID under its own policy to select and measure
+  ads. In the European Economic Area, the United Kingdom and Switzerland,
+  consent for ads is requested with Google's consent form and can be changed at
+  any time in <strong>Settings &gt; Ad privacy options</strong>. See
+  <a href="https://policies.google.com/technologies/partner-sites">Google's privacy policy</a>
+  for how Google uses data. For subscribers the ad system is not started at all.
+</p>
+<p>
+  <strong>Rewarded ads:</strong> by watching an ad to the end you get full
+  speed for 30 minutes (stacking up to 2 hours). To verify the reward, your
+  anonymous ID is passed to Google when the ad loads; after the ad is watched,
+  Google sends a signed notification to our server. We keep only the
+  transaction number and the anonymous ID for <strong>30 days</strong>, to
+  prevent the same ad from being rewarded twice; the end time of full speed is
+  kept with your device record. We do not keep which ad you watched.
+</p>
+
+<h3>2.7 Subscription</h3>
+<p>
+  Payment is made through Google Play; your card details never reach us. When
+  a purchase completes, the <em>purchase token</em> issued by Google Play is sent
+  to our server and verified with the Google Play Developer API. We keep: the
+  token, the plan (yearly / monthly / weekly), the subscription status, and the
+  start and end dates. The subscription status is re-checked with Google Play
+  once a day to pick up refunds, cancellations and plan changes. Your payment
+  method, billing address or Google account name never reach us.
+</p>
+<p>
+  Premium is valid on <strong>one device at a time</strong>. When you tap
+  <em>Restore purchase</em> on a new device, the subscription moves to that
+  device and the previous device returns to free use.
+</p>
+
+<h2>3. Purposes and legal bases</h2>
+<table>
+  <tr><th>Purpose</th><th>Legal basis (GDPR Art. 6 / KVKK Art. 5)</th></tr>
+  <tr><td>Setting up the VPN connection, managing tier and subscription</td><td>Performance of a contract</td></tr>
+  <tr><td>Preventing abuse and overload, security</td><td>Legitimate interest</td></tr>
+  <tr><td>Ads in free use (personalisation in the EEA/UK/Switzerland)</td><td>Legitimate interest; consent (consent form) in those regions</td></tr>
+  <tr><td>Keeping subscription records as required by law</td><td>Legal obligation</td></tr>
+</table>
+
+<h2>4. Retention</h2>
+<ul>
+  <li><strong>Device record:</strong> deleted automatically after 14 days without any connection. A new record is created when you connect again.</li>
+  <li><strong>IP address and browser information in the session record:</strong> deleted within 10 minutes.</li>
+  <li><strong>Rewarded ad transaction numbers:</strong> 30 days.</li>
+  <li><strong>Anonymous ID and all records linked to it:</strong> deleted automatically after 180 days of no use (if there is no valid subscription).</li>
+  <li><strong>Subscription record:</strong> as long as the anonymous ID exists; deleted together with it.</li>
+  <li><strong>Server operational log:</strong> 7 days.</li>
+  <li>If you uninstall the app, the key and session data on your device are deleted too. When you send a deletion request, your records are deleted within 30 days at the latest.</li>
+</ul>
+
+<h2>5. Recipients and international transfers</h2>
+<table>
+  <tr><th>Who</th><th>For what</th><th>Where</th></tr>
+  <tr><td>Supabase</td><td>Database and anonymous identity infrastructure</td><td>Germany (EU)</td></tr>
+  <tr><td>Hetzner</td><td>Hosting the VPN servers</td><td>Germany (EU)</td></tr>
+  <tr><td>Cloudflare</td><td>DNS resolution (see 2.5)</td><td>Global network</td></tr>
+  <tr><td>Google AdMob</td><td>Ads in free use and reward notifications (see 2.6)</td><td>USA and other countries</td></tr>
+  <tr><td>Google Play</td><td>Subscription payment and verification (see 2.7)</td><td>USA and other countries</td></tr>
+</table>
+<p>
+  These providers process data to provide their service to us or, for Google
+  ads, under their own policies. Seen from Türkiye these are international
+  transfers and are made under the providers' data processing agreements.
+  Your data is not sold and is not transferred to anyone for marketing or data
+  trading.
+</p>
+
+<h2>6. Your rights</h2>
+<p>
+  Under the GDPR and KVKK (Turkish Law No. 6698, Art. 11) you have the right to
+  learn whether your data is processed, to request information and a copy
+  (portability), rectification, erasure, restriction of processing, to object
+  to processing, to learn who it was transferred to, and to claim compensation
+  if you suffer damage. You can withdraw ad consent at any time in Settings.
+</p>
+<p>
+  Send your request to <a href="mailto:vpnfastultra@gmail.com">vpnfastultra@gmail.com</a>.
+  Because there are no accounts, please include the device ID shown on the
+  <strong>My Subscription</strong> screen in the app (tap it to copy the full
+  ID) so we can find your record. Requests are answered within 30 days. If you
+  are not satisfied with our answer, you can complain to the Turkish Personal
+  Data Protection Authority or to the data protection authority of your country.
+</p>
+
+<h2>7. Children</h2>
+<p>
+  The app is not directed at children under 13 and does not knowingly collect
+  data from them.
+</p>
+
+<h2>8. Changes</h2>
+<p>
+  If this policy changes, this page is updated and the date above is renewed.
+</p>
+
+<footer>
+  VPN Fast Ultra &middot; <code>com.vpnfastultra.app</code> &middot;
+  <a href="terms.html">Terms of Service</a>
+</footer>
+</main>
