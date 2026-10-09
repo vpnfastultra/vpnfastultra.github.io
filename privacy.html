@@ -88,8 +88,9 @@
   <code>vpnfastultra.github.io</code>. Personal data is collected
   <strong>automatically and electronically</strong> through the app and our
   servers while you use the app; when you email us, we process the information
-  you send. The app only uses the internet permission and Android's own VPN
-  consent dialog; it does not request location, contacts, photos, files,
+  you send. The app only uses normal permissions that are not prompted (internet
+  access, network state, Google Play billing, advertising ID) and Android's own
+  VPN consent dialog; it does not request location, contacts, photos, files,
   microphone or camera permissions.
 </p>
 
@@ -289,6 +290,7 @@
 <h2>7. Retention and deletion</h2>
 <ul>
   <li><strong>IP address and client information in the session record:</strong> deleted within 10 minutes.</li>
+  <li><strong>Authentication event records and used session tokens</strong> (anonymous ID and time; no IP): 1 day.</li>
   <li><strong>Supabase platform logs:</strong> Supabase's retention period (1 to 7 days depending on the plan).</li>
   <li><strong>Real IP and port in server memory:</strong> until your device record is removed from the server or the server restarts; overwritten on a new connection.</li>
   <li><strong>Device record:</strong> deleted automatically after 14 days without any connection; a new record is created when you connect again. When you move to another device, the old record is deleted.</li>
